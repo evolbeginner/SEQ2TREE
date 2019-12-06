@@ -1,0 +1,89 @@
+
+
+WARNING: RAxML is not checking sequences for duplicate seqs and sites with missing data!
+
+
+
+This is RAxML version 8.1.22 released by Alexandros Stamatakis on June 15 2015.
+
+With greatly appreciated code contributions by:
+Andre Aberer      (HITS)
+Simon Berger      (HITS)
+Alexey Kozlov     (HITS)
+Kassian Kobert    (HITS)
+David Dao         (KIT and HITS)
+Nick Pattengale   (Sandia)
+Wayne Pfeiffer    (SDSC)
+Akifumi S. Tanabe (NRIFS)
+
+Alignment has 511 distinct alignment patterns
+
+Proportion of gaps and completely undetermined characters in this alignment: 27.16%
+
+RAxML experimental very fast tree search
+
+Using 4 distinct models/data partitions with joint branch length optimization
+
+
+All free model parameters will be estimated by RAxML
+GAMMA model of rate heteorgeneity, ML estimate of alpha-parameter
+
+GAMMA Model parameters will be estimated up to an accuracy of 10.0000000000 Log Likelihood units
+
+Partition: 0
+Alignment Patterns: 79
+Name: Subset1
+DataType: AA
+Substitution Matrix: LG
+Using fixed base frequencies
+
+
+
+Partition: 1
+Alignment Patterns: 144
+Name: Subset2
+DataType: AA
+Substitution Matrix: LG
+Using fixed base frequencies
+
+
+
+Partition: 2
+Alignment Patterns: 144
+Name: Subset3
+DataType: AA
+Substitution Matrix: LG
+Using fixed base frequencies
+
+
+
+Partition: 3
+Alignment Patterns: 144
+Name: Subset4
+DataType: AA
+Substitution Matrix: LG
+Using fixed base frequencies
+
+
+
+
+RAxML was called as follows:
+
+/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml_pthreads.linux -f E -s ./analysis/start_tree/filtered_source.phy -m PROTGAMMALG -O -n fastTREE -# 1 -p 123456789 -q ./analysis/start_tree/partitions.txt -e 10 -w /home-fn/users/nsfn1362_LHW/LHW-tools/SEQ2TREE/my_test/dudu-2/partition/analysis/start_tree -T 10 
+
+
+Time after init : 0.134020
+Time after init and starting tree: 3.875759
+Time after init, starting tree, mod opt: 6.309272
+Partion 0 number of Cats: 1
+Partion 1 number of Cats: 1
+Partion 2 number of Cats: 1
+Partion 3 number of Cats: 1
+LH after SPRs -20111.956264, after NNI -20083.792732
+LH after SPRs -20048.937167, after NNI -20043.334982
+LH after SPRs -20043.313996, after NNI -20043.276834
+RAxML fast tree written to file: /home-fn/users/nsfn1362_LHW/LHW-tools/SEQ2TREE/my_test/dudu-2/partition/analysis/start_tree/RAxML_fastTree.fastTREE
+
+Model parameters (binary file format) written to: /home-fn/users/nsfn1362_LHW/LHW-tools/SEQ2TREE/my_test/dudu-2/partition/analysis/start_tree/RAxML_binaryModelParameters.fastTREE
+Total execution time: 56.745989
+Good bye ... 

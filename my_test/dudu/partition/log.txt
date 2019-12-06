@@ -1,0 +1,489 @@
+INFO     | 2018-01-15 15:54:29,704 | config     | Loading configuration at './partition_finder.cfg'
+INFO     | 2018-01-15 15:54:29,710 | config     | Setting 'alignment' to 'combined.phy'
+INFO     | 2018-01-15 15:54:29,710 | config     | Setting 'branchlengths' to 'linked'
+INFO     | 2018-01-15 15:54:29,711 | parser     | You set 'models' to: LG+G, LG+I+G, WAG+G, WAG+I+G
+INFO     | 2018-01-15 15:54:30,466 | model_load | This analysis will use the following 4 models of molecular evolution
+INFO     | 2018-01-15 15:54:30,467 | model_load | LG+G, LG+I+G, WAG+G, WAG+I+G
+INFO     | 2018-01-15 15:54:30,467 | config     | Setting 'model_selection' to 'aicc'
+DEBUG    | 2018-01-15 15:54:30,533 | subset     | Created Subset(..)
+DEBUG    | 2018-01-15 15:54:30,534 | subset     | Created Subset(..)
+DEBUG    | 2018-01-15 15:54:30,535 | subset     | Created Subset(..)
+DEBUG    | 2018-01-15 15:54:30,536 | subset     | Created Subset(..)
+INFO     | 2018-01-15 15:54:30,537 | config     | Setting 'search' to 'rcluster'
+INFO     | 2018-01-15 15:54:30,538 | config     | ------------------------ BEGINNING NEW RUN -------------------------------
+INFO     | 2018-01-15 15:54:30,539 | config     | Looking for alignment file './combined.phy'...
+INFO     | 2018-01-15 15:54:30,540 | analysis   | Beginning Analysis
+INFO     | 2018-01-15 15:54:30,580 | alignment  | Reading alignment file './combined.phy'
+DEBUG    | 2018-01-15 15:54:30,584 | alignment  | Writing phylip file './analysis/start_tree/source.phy'
+DEBUG    | 2018-01-15 15:54:30,585 | subset     | Created Subset(..)
+DEBUG    | 2018-01-15 15:54:30,586 | alignment  | Max site in data_blocks: 679; max site in alignment: 679
+DEBUG    | 2018-01-15 15:54:30,588 | alignment  | Writing phylip file './analysis/start_tree/filtered_source.phy'
+INFO     | 2018-01-15 15:54:30,590 | analysis   | Starting tree will be estimated from the data.
+DEBUG    | 2018-01-15 15:54:30,590 | analysis   | Estimating new starting tree, no old tree found
+DEBUG    | 2018-01-15 15:54:30,591 | analysis   | didn't find tree at ./analysis/start_tree/RAxML_result.BLTREE, making an ML tree with RAxML
+INFO     | 2018-01-15 15:54:30,591 | raxml      | Estimating Maximum Likelihood tree with RAxML fast experimental tree search for ./analysis/start_tree/filtered_source.phy
+INFO     | 2018-01-15 15:54:30,593 | raxml      | Using a separate LG+G model for each data block
+DEBUG    | 2018-01-15 15:54:30,593 | util       | Checking for program raxml_pthreads.linux
+DEBUG    | 2018-01-15 15:54:30,596 | util       | Found program raxml_pthreads.linux at '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml_pthreads.linux'
+DEBUG    | 2018-01-15 15:54:30,596 | util       | Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml_pthreads.linux -f E -s './analysis/start_tree/filtered_source.phy' -m PROTGAMMALG -O -n fastTREE -# 1 -p 123456789 -q './analysis/start_tree/partitions.txt' -e 10 -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/start_tree' -T 10 '
+INFO     | 2018-01-15 15:55:27,337 | raxml      | Estimating LG+G branch lengths on ML tree using all partitions
+DEBUG    | 2018-01-15 15:55:27,337 | util       | Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml_pthreads.linux -f e -s './analysis/start_tree/filtered_source.phy' -t './analysis/start_tree/RAxML_fastTree.fastTREE' -m PROTGAMMALG -O -n BLTREE -p 123456789 -q './analysis/start_tree/partitions.txt' -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/start_tree' -e 1 -T 10 '
+DEBUG    | 2018-01-15 15:55:36,251 | raxml      | RAxML tree with branch lengths ('./analysis/start_tree/RAxML_result.BLTREE') looks like this:
+DEBUG    | 2018-01-15 15:55:36,252 | raxml      | ((((((A7HWS8.1:0.06224086766113686581,((((((B0T2D9.1:0.02987669735967850640,Q9A8T6.1:0.00000093904650884574):0.09389472835367682069,B4R8N4.1:0.03611121584280147651):0.17115881341736591259,(Q0BYD1.1:0.21223658410764503768,Q0ANR7.1:0.16022613817255856872):0.07709638466850826655):0.07848589720602411335,(((A1B044.1:0.10060377314513485603,(Q3J5Q5.1:0.00367190258682303450,A4WVJ1.1:0.01834466982975001617):0.06987755294022307551):0.03883740516681920274,((((Q1GK12.1:0.05285180622981652115,Q5LW41.1:0.04572419124397933410):0.03361603729632981624,Q16AC7.1:0.01681376596490720410):0.04070419099217929826,Q28UT7.1:0.10316670362035899877):0.03768110459589672084,A8LM74.1:0.07239467930387687156):0.02304241598855536616):0.29056788197801053375,((A5V5Y5.1:0.06304226403529177014,((Q5NQ48.1:0.14568317927898166708,Q1GPB6.1:0.09924317932736741177):0.02676434509979763732,Q2G8W3.1:0.09864709302418406267):0.05012270494219817074):0.05358679080937883699,Q2N9C8.1:0.11706495016654865082):0.26551980126098234658):0.08767603291871911564):0.04252974458436211552,((((A2SLE0.1:0.13527816788194688136,B1Y8C0.1:0.23916435847175540608):0.05887534666031520730,(((((A4G9S1.1:0.14577829616379398003,(((B2UEK2.1:0.03462246730660272637,((Q46WG1.1:0.00169452137066789053,Q0K636.1:0.00994271203761339269):0.01666008817899802125,Q1LI54.1:0.02852299479111384400):0.04422712609704772951):0.02155007078690517747,Q8XV29.1:0.00000093904650884574):0.07674587887274730846,((((Q0BJ29.1:0.00000093904650884574,Q39KF0.1:0.00000093904650884574):0.01165025158943084477,Q13TI7.1:0.01130482756630251523):0.00989432711310407609,((B2T734.1:0.01125115031943491745,Q2SU44.1:0.00000093904650884574):0.01117744148353547011,(B2JI48.1:0.00000093904650884574,Q62GM2.1:0.00000093904650884574):0.00000093904650884574):0.01281125361596844626):0.11297384869918267181,((Q2L266.1:0.02385348210412333372,A9IHT0.1:0.00000093904650884574):0.00895984945799335221,Q7WRA6.1:0.02398348850995610237):0.37043515887913847084):0.06133084381415359471):0.07221350285423322468):0.02741865967341108878,A4SUX8.1:0.13760298223981953791):0.07504441933536369624,Q47J86.1:0.22892538543903226400):0.25910402192140019606,A9BRW8.1:0.08904397363950061761):0.01703962643537321187,((A1TJT4.1:0.13736783894293388975,A1W325.1:0.01081348342698700005):0.03228262461421674279,(A1WK99.1:0.07893359915675027261,(C5CQ83.1:0.16480401683199547014,(A1VJ32.1:0.03607783245945579698,Q12G86.1:0.01931795408206092232):0.06499112568765098852):0.01884614478169868712):0.01079397011912429545):0.01442303373447260430):0.12656279358856512007):0.45668435667222256891,B7J484.1:0.81487354672608380834):0.34494939481026981598,(((A8GPD3.1:0.01762524279547561870,((((C4K2G2.1:0.00890645458630615755,A8GT52.1:0.01760543571146251998):0.00876751064443561864,(C3PP90.1:0.00000093904650884574,Q92GY3.1:0.00000093904650884574):0.00000093904650884574):0.00879819686937915318,A8F2D0.2:0.00000093904650884574):0.01763629246555070348,Q4UMR2.1:0.00000093904650884574):0.00000093904650884574):0.03616589382051995510,(Q9ZCS2.1:0.00000093904650884574,Q68W95.1:0.00000093904650884574):0.00000093904650884574):0.97309332920552382706,Q4FLN5.1:0.72251350971125472000):0.06094361969282812569):0.23418524544223717765):0.01491499703328525231,(((A0L5Z0.1:0.78406514281511652253,(C6C1A2.1:0.63972046931708859141,Q39XY9.1:0.52679817352882285508):0.37357980241618865547):0.29556100497291981632,(Q2RQX7.1:0.22522329495218174067,Q2W2K8.1:0.15044557829747826072):0.00290936069783288278):0.14037921649939230639,(((A9H3L2.1:0.06244301455319185845,Q5FU00.1:0.20776276367451407268):0.05301317749093686221,Q0BUN3.1:0.01522472304281157623):0.10467491197654367474,A5FZU8.1:0.14000989318849232923):0.24570695853768931283):0.11511681610559561240):0.00000093904650884574):0.10819496223403086976,(((((A4YSK9.2:0.02783879865554108463,((Q2IXP3.1:0.01011194234125832245,Q134U6.1:0.02028373888311866408):0.01012800323259487219,Q6N4V0.3:0.03041979625274661772):0.01111501817726107295):0.00974859778879319863,B6JEY2.1:0.05229603564865387133):0.00987537437027349342,((Q3SSU9.1:0.00000093904650884574,Q1QN13.1:0.01933956152341118756):0.01938714675803672113,((Q211G5.1:0.00931861128329540718,Q89JA1.1:0.02902250620564075789):0.00000093904650884574,Q07KN5.1:0.00000093904650884574):0.00000093904650884574):0.00000093904650884574):0.10256544184701643641,(B8ELE6.1:0.03265015859894564165,B2IK79.1:0.05394682116171720110):0.09701815149335908661):0.01322690852458449813,((B1LWQ9.1:0.01013290066871331239,((B0UHV2.1:0.02201046886382850357,B8ISA2.1:0.02051796713278806680):0.08213382730708965185,(B1Z776.1:0.00000093904650884574,A9W4S3.1:0.00000093904650884574):0.00000093904650884574):0.03080946232360842404):0.06487024452799443341,(A8IAP6.1:0.04102987372031744601,A7IPQ3.1:0.00000093904650884574):0.07885550501363100540):0.02668322582360834264):0.02052528316884409329):0.14351986937792232668,(A1USR1.1:0.07961314234778257837,((Q6FZD9.1:0.03881557204136960176,Q6G2Y2.1:0.02791157652542781975):0.00481274461114505805,A9IW04.1:0.02577185280929716188):0.03902835515007565398):0.04090500082885341337):0.02409381520523424039,((A6X0D5.1:0.00000093904650884574,P66571.1:0.00000093904650884574):0.00000093904650884574,A5VQY9.1:0.01030200527047924093):0.04342509068246289128):0.01382494486280187729,111111111111111111111111111111:0.10765409107560809654):0.01168170828158604686,(Q11HR9.1:0.06169937073561195667,((C3MAZ7.1:0.00000093904650884574,Q92QF3.1:0.02862495852529846688):0.03430608341908188835,(Q8UE35.1:0.00000093904650884574,(B9JVQ4.1:0.00779487192901676378,(Q1MIC4.1:0.00000093904650884574,Q2K9J9.1:0.00196993633433363438):0.04161582789634847568):0.01694783870943542339):0.01931003359869157276):0.09865658624777207120):0.02629102529120035114,Q98N40.2:0.10975306175279084253):0.0;
+INFO     | 2018-01-15 15:55:36,252 | raxml      | ML topology estimation finished
+DEBUG    | 2018-01-15 15:55:36,255 | analysis   | Starting tree with branch lengths is here: ./analysis/start_tree/RAxML_result.BLTREE
+INFO     | 2018-01-15 15:55:36,255 | analysis_m | Performing relaxed clustering analysis
+INFO     | 2018-01-15 15:55:36,255 | analysis_m |    Set rcluster-max to 1000
+INFO     | 2018-01-15 15:55:36,255 | analysis_m |    PartitionFinder will have to analyse 13 subsets to complete this analyses
+INFO     | 2018-01-15 15:55:36,255 | analysis_m |    *** Analysing starting scheme ***
+DEBUG    | 2018-01-15 15:55:36,256 | analysis   |       chunk size (in number of subsets) = 250
+DEBUG    | 2018-01-15 15:55:36,256 | subset     |       Finalising subset 044c04ffffeac4b427031ffb22812ad5
+DEBUG    | 2018-01-15 15:55:36,257 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'WAG+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:36,257 | alignment  |       Max site in data_blocks: 187; max site in alignment: 679
+DEBUG    | 2018-01-15 15:55:36,314 | alignment  |       Writing phylip file './analysis/phylofiles/044c04ffffeac4b427031ffb22812ad5.phy'
+DEBUG    | 2018-01-15 15:55:36,327 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:36,327 | raxml_mode |       Model: WAG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:55:36,336 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:36,337 | raxml_mode |       Model: LG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:55:36,343 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:55:36,344 | raxml_mode |       Model: WAG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:55:36,350 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:55:36,350 | raxml_mode |       Model: LG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:55:36,350 | subset     |       Finalising subset 9bb5662920fd9e08eca22f0cceb51e32
+DEBUG    | 2018-01-15 15:55:36,350 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'WAG+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:36,351 | alignment  |       Max site in data_blocks: 679; max site in alignment: 679
+DEBUG    | 2018-01-15 15:55:36,353 | alignment  |       Writing phylip file './analysis/phylofiles/9bb5662920fd9e08eca22f0cceb51e32.phy'
+DEBUG    | 2018-01-15 15:55:36,360 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:36,360 | raxml_mode |       Model: WAG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:55:36,366 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:36,367 | raxml_mode |       Model: LG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:55:36,373 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:55:36,373 | raxml_mode |       Model: WAG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:55:36,379 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:55:36,379 | raxml_mode |       Model: LG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:55:36,379 | subset     |       Finalising subset 3e8e489bf6c44d0fc0d24b5e2e786dd4
+DEBUG    | 2018-01-15 15:55:36,380 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'WAG+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:36,380 | alignment  |       Max site in data_blocks: 515; max site in alignment: 679
+DEBUG    | 2018-01-15 15:55:36,382 | alignment  |       Writing phylip file './analysis/phylofiles/3e8e489bf6c44d0fc0d24b5e2e786dd4.phy'
+DEBUG    | 2018-01-15 15:55:36,389 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:36,389 | raxml_mode |       Model: WAG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:55:36,396 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:36,396 | raxml_mode |       Model: LG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:55:36,402 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:55:36,402 | raxml_mode |       Model: WAG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:55:36,408 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:55:36,408 | raxml_mode |       Model: LG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:55:36,409 | subset     |       Finalising subset 3f4a93923f60e527200c9325b0cece4b
+DEBUG    | 2018-01-15 15:55:36,409 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'WAG+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:36,409 | alignment  |       Max site in data_blocks: 351; max site in alignment: 679
+DEBUG    | 2018-01-15 15:55:36,411 | alignment  |       Writing phylip file './analysis/phylofiles/3f4a93923f60e527200c9325b0cece4b.phy'
+DEBUG    | 2018-01-15 15:55:36,421 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:36,422 | raxml_mode |       Model: WAG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:55:36,428 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:36,428 | raxml_mode |       Model: LG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:55:36,434 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:55:36,434 | raxml_mode |       Model: WAG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:55:36,440 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:55:36,441 | raxml_mode |       Model: LG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:55:36,441 | threadpool |       Creating 10 threads for 16 tasks
+DEBUG    | 2018-01-15 15:55:36,448 | util       |       Checking for program raxml.linux
+DEBUG    | 2018-01-15 15:55:36,448 | util       |       Checking for program raxml.linux
+DEBUG    | 2018-01-15 15:55:36,456 | util       |       Checking for program raxml.linux
+DEBUG    | 2018-01-15 15:55:36,456 | util       |       Checking for program raxml.linux
+DEBUG    | 2018-01-15 15:55:36,457 | util       |       Checking for program raxml.linux
+DEBUG    | 2018-01-15 15:55:36,458 | util       |       Found program raxml.linux at '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux'
+DEBUG    | 2018-01-15 15:55:36,458 | util       |       Found program raxml.linux at '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux'
+DEBUG    | 2018-01-15 15:55:36,458 | util       |       Found program raxml.linux at '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux'
+DEBUG    | 2018-01-15 15:55:36,459 | util       |       Found program raxml.linux at '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux'
+DEBUG    | 2018-01-15 15:55:36,459 | util       |       Checking for program raxml.linux
+DEBUG    | 2018-01-15 15:55:36,459 | util       |       Found program raxml.linux at '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux'
+DEBUG    | 2018-01-15 15:55:36,460 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/044c04ffffeac4b427031ffb22812ad5.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAIWAG -n 044c04ffffeac4b427031ffb22812ad5_WAG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,219 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/044c04ffffeac4b427031ffb22812ad5.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAILG -n 044c04ffffeac4b427031ffb22812ad5_LG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,220 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/9bb5662920fd9e08eca22f0cceb51e32.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAWAG -n 9bb5662920fd9e08eca22f0cceb51e32_WAG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,220 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/044c04ffffeac4b427031ffb22812ad5.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAWAG -n 044c04ffffeac4b427031ffb22812ad5_WAG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,240 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/044c04ffffeac4b427031ffb22812ad5.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMALG -n 044c04ffffeac4b427031ffb22812ad5_LG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,240 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/9bb5662920fd9e08eca22f0cceb51e32.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMALG -n 9bb5662920fd9e08eca22f0cceb51e32_LG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,241 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/3e8e489bf6c44d0fc0d24b5e2e786dd4.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAIWAG -n 3e8e489bf6c44d0fc0d24b5e2e786dd4_WAG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,241 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/3e8e489bf6c44d0fc0d24b5e2e786dd4.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAILG -n 3e8e489bf6c44d0fc0d24b5e2e786dd4_LG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,241 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/9bb5662920fd9e08eca22f0cceb51e32.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAIWAG -n 9bb5662920fd9e08eca22f0cceb51e32_WAG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:38,281 | util       |       Found program raxml.linux at '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux'
+DEBUG    | 2018-01-15 15:55:38,321 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/9bb5662920fd9e08eca22f0cceb51e32.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAILG -n 9bb5662920fd9e08eca22f0cceb51e32_LG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:42,435 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:43,442 | raxml      |       Result is DataRecord<lnl:[-1228.38122559], tree_size:[ 18.05963326], secs:[3]>
+DEBUG    | 2018-01-15 15:55:44,159 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:55:45,115 | subset     |       Added model to subset. Model: WAG+G, params: 1, sites:187, lnL:-1228.38, site_rate 18.059633
+DEBUG    | 2018-01-15 15:55:45,118 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:45,119 | subset     |       Finalising subset 044c04ffffeac4b427031ffb22812ad5
+DEBUG    | 2018-01-15 15:55:45,119 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:45,119 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/3e8e489bf6c44d0fc0d24b5e2e786dd4.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAWAG -n 3e8e489bf6c44d0fc0d24b5e2e786dd4_WAG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:45,123 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:45,218 | raxml      |       Result is DataRecord<lnl:[-6359.94628906], tree_size:[ 12.42891216], secs:[3]>
+DEBUG    | 2018-01-15 15:55:45,226 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:55:45,230 | subset     |       Added model to subset. Model: WAG+G, params: 1, sites:164, lnL:-6359.95, site_rate 12.428912
+DEBUG    | 2018-01-15 15:55:45,234 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:45,234 | subset     |       Finalising subset 9bb5662920fd9e08eca22f0cceb51e32
+DEBUG    | 2018-01-15 15:55:45,234 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:45,235 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/3e8e489bf6c44d0fc0d24b5e2e786dd4.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMALG -n 3e8e489bf6c44d0fc0d24b5e2e786dd4_LG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:45,669 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:45,778 | raxml      |       Result is DataRecord<lnl:[-6272.5078125], tree_size:[ 15.69880581], secs:[7]>
+DEBUG    | 2018-01-15 15:55:45,786 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:45,791 | subset     |       Added model to subset. Model: LG+I+G, params: 2, sites:164, lnL:-6272.51, site_rate 15.698806
+DEBUG    | 2018-01-15 15:55:45,847 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:45,847 | subset     |       Finalising subset 9bb5662920fd9e08eca22f0cceb51e32
+DEBUG    | 2018-01-15 15:55:45,847 | subset     |       models not done: set(['WAG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:45,847 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/3f4a93923f60e527200c9325b0cece4b.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAIWAG -n 3f4a93923f60e527200c9325b0cece4b_WAG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:48,382 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:48,466 | raxml      |       Result is DataRecord<lnl:[-6360.28417969], tree_size:[ 12.42931271], secs:[3]>
+DEBUG    | 2018-01-15 15:55:48,474 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:55:48,478 | subset     |       Added model to subset. Model: WAG+G, params: 1, sites:164, lnL:-6360.28, site_rate 12.429313
+DEBUG    | 2018-01-15 15:55:48,707 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:48,707 | subset     |       Finalising subset 3e8e489bf6c44d0fc0d24b5e2e786dd4
+DEBUG    | 2018-01-15 15:55:48,707 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:48,708 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/3f4a93923f60e527200c9325b0cece4b.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAILG -n 3f4a93923f60e527200c9325b0cece4b_LG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:48,723 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:48,803 | raxml      |       Result is DataRecord<lnl:[-6272.86816406], tree_size:[ 15.64258862], secs:[3]>
+DEBUG    | 2018-01-15 15:55:48,811 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:55:48,814 | subset     |       Added model to subset. Model: LG+G, params: 1, sites:164, lnL:-6272.87, site_rate 15.642589
+DEBUG    | 2018-01-15 15:55:48,817 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:48,818 | subset     |       Finalising subset 3e8e489bf6c44d0fc0d24b5e2e786dd4
+DEBUG    | 2018-01-15 15:55:48,818 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G'])
+DEBUG    | 2018-01-15 15:55:48,818 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/3f4a93923f60e527200c9325b0cece4b.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAWAG -n 3f4a93923f60e527200c9325b0cece4b_WAG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:52,109 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:52,195 | raxml      |       Result is DataRecord<lnl:[-6360.28417969], tree_size:[ 12.42931271], secs:[3]>
+DEBUG    | 2018-01-15 15:55:52,203 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:55:52,206 | subset     |       Added model to subset. Model: WAG+G, params: 1, sites:164, lnL:-6360.28, site_rate 12.429313
+DEBUG    | 2018-01-15 15:55:52,209 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:52,209 | subset     |       Finalising subset 3f4a93923f60e527200c9325b0cece4b
+DEBUG    | 2018-01-15 15:55:52,209 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:52,210 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/3f4a93923f60e527200c9325b0cece4b.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMALG -n 3f4a93923f60e527200c9325b0cece4b_LG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:55:52,261 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:52,348 | raxml      |       Result is DataRecord<lnl:[-6357.53808594], tree_size:[ 13.30106735], secs:[6]>
+DEBUG    | 2018-01-15 15:55:52,355 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:52,359 | subset     |       Added model to subset. Model: WAG+I+G, params: 2, sites:164, lnL:-6357.54, site_rate 13.301067
+DEBUG    | 2018-01-15 15:55:52,363 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:52,363 | subset     |       Finalising subset 3f4a93923f60e527200c9325b0cece4b
+DEBUG    | 2018-01-15 15:55:52,363 | subset     |       models not done: set(['LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:55,199 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:55,270 | raxml      |       Result is DataRecord<lnl:[-6272.86816406], tree_size:[ 15.64258862], secs:[2]>
+DEBUG    | 2018-01-15 15:55:55,277 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:55:55,281 | subset     |       Added model to subset. Model: LG+G, params: 1, sites:164, lnL:-6272.87, site_rate 15.642589
+DEBUG    | 2018-01-15 15:55:55,285 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:55,285 | subset     |       Finalising subset 3f4a93923f60e527200c9325b0cece4b
+DEBUG    | 2018-01-15 15:55:55,286 | subset     |       models not done: set(['LG+I+G'])
+DEBUG    | 2018-01-15 15:55:55,288 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:55,382 | raxml      |       Result is DataRecord<lnl:[-6270.04052734], tree_size:[ 15.95991135], secs:[6]>
+DEBUG    | 2018-01-15 15:55:55,388 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:55,391 | subset     |       Added model to subset. Model: LG+I+G, params: 2, sites:164, lnL:-6270.04, site_rate 15.959911
+DEBUG    | 2018-01-15 15:55:55,394 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:55,394 | subset     |       Finalising subset 3f4a93923f60e527200c9325b0cece4b
+DEBUG    | 2018-01-15 15:55:55,394 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:55:55,402 | subset     |       Best model for this subset: LG+I+G lnL: -6270.04 site_rate: 15.9599 params: 2 alpha: 0.747118 freqs: [ 0.079066 0.055941 0.041977 0.053052 0.012937 0.040767 0.071586 0.057337 0.022355 0.062157 0.099081 0.0646 0.022951 0.042302 0.04404 0.061197 0.053287 0.012066 0.034155 0.069146] rates: [ 3.99181992e-01 2.59945005e-01 3.71057987e-01 2.33736396e+00 9.10775006e-01 9.75241005e-01 1.94010603e+00 3.36984009e-01 1.40697002e-01 3.71239990e-01 5.03814995e-01 1.05552006e+00 2.38236994e-01 1.10586798e+00 4.43904114e+00 2.00908995e+00 1.69701993e-01 2.05613002e-01 2.39256692e+00 7.06048012e-01 1.16397999e-01 5.01968026e-01 2.63675404e+00 3.41785014e-01 3.66407990e-01 2.27869010e+00 1.19250000e-01 2.83448994e-01 5.94046688e+00 4.54623014e-01 4.95080017e-02 3.12263995e-01 8.05842996e-01 5.43694973e-01 5.57424009e-01 2.95273989e-01 1.60471007e-01 4.76673698e+00 4.96537000e-01 1.59238899e+00 5.08692026e-01 1.35001504e+00 4.23438120e+00 1.79830000e-01 6.42559975e-02 2.01432705e+00 3.48390013e-01 8.40680003e-02 1.51924998e-01 3.76403189e+00 1.87872899e+00 4.26100008e-02 5.74720025e-01 7.85870031e-02 5.87430000e-02 4.91483003e-01 4.92423391e+00 7.93424010e-01 8.70603025e-01 1.00379996e-02 1.41570000e-02 2.65711010e-01 2.39909999e-02 1.63540002e-02 3.70411992e-01 1.16467500e+00 3.99901986e-01 2.80680005e-02 1.26872003e-01 3.56529988e-02 7.96390027e-02 3.28600011e-03 5.34565985e-01 6.01499021e-01 3.01082999e-01 5.57799995e-01 1.24570001e-02 8.39206994e-01 1.03788102e+00 7.07869977e-02 2.61475301e+00 1.07377994e+00 6.29280984e-01 1.09448802e+00 1.83986402e+00 3.87693596e+00 2.51626015e-01 4.52010202e+00 6.84129968e-02 5.46953976e-01 3.03714991e+00 1.57061899e+00 3.36689986e-02 5.86241007e-01 1.14923096e+00 1.01429701e+00 2.21801996e-01 2.41650000e-01 1.97511002e-01 3.27582985e-01 3.98043990e-01 4.15670015e-02 6.54259995e-02 1.69702196e+00 1.63145006e-01 1.76640004e-02 3.93844008e-01 5.74670970e-01 5.67695022e-01 7.31069967e-02 1.12719998e-01 2.30097994e-01 2.92497993e-01 8.17400031e-03 4.15630005e-02 2.78555006e-01 1.31033003e-01 8.41249973e-02 1.84955001e-01 1.63392997e+00 1.21922001e-01 2.52124995e-01 5.13460003e-02 7.20259994e-02 1.02245003e-01 3.43988001e-01 6.54762983e-01 4.15502012e-01 6.40559971e-01 4.77833986e-01 9.29666996e-01 5.48649013e-01 5.60661018e-01 4.98336077e+00 1.11759000e-01 3.89240789e+00 1.49372995e-01 4.01311302e+00 1.04490197e+00 7.35090002e-02 6.01980016e-02 9.70727980e-01 1.04854003e-01 2.18349993e-01 1.00000000e+01 1.29118994e-01 5.92759418e+00 2.43465710e+00 2.33879000e-01 1.71176001e-01 2.84471005e-01 5.81862986e-01 2.81383008e-01 1.59895599e+00 6.16581023e-01 2.24600006e-02 3.66530001e-01 7.03047991e-01 1.06756699e+00 4.68639992e-02 1.23889998e-01 1.73913002e-01 1.68920505e+00 9.37630013e-02 3.25810999e-01 1.89721596e+00 6.53739989e-01 4.51968014e-01 1.78298295e+00 8.87060016e-02 3.39765012e-01 1.54944003e-01 2.30734897e+00 7.32822180e+00 6.14777029e-01 1.25656700e+00 5.36634982e-01 8.93319994e-02 8.41509998e-02 2.78427988e-01 6.07776690e+00 2.33693004e-01 3.76132011e-01 9.23729986e-02 1.32240996e-01 2.30856001e-01 2.05478096e+00 2.95969892e+00 1.77958995e-01 2.34116003e-01]
+INFO     | 2018-01-15 15:55:55,406 | progress   |       Finished subset 1/4, 25.00 percent done
+DEBUG    | 2018-01-15 15:55:55,861 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:55,949 | raxml      |       Result is DataRecord<lnl:[-6359.94628906], tree_size:[ 12.42974186], secs:[6]>
+DEBUG    | 2018-01-15 15:55:55,956 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:55,958 | subset     |       Added model to subset. Model: WAG+I+G, params: 2, sites:164, lnL:-6359.95, site_rate 12.429742
+DEBUG    | 2018-01-15 15:55:55,961 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:55,962 | subset     |       Finalising subset 9bb5662920fd9e08eca22f0cceb51e32
+DEBUG    | 2018-01-15 15:55:55,962 | subset     |       models not done: set(['LG+G'])
+DEBUG    | 2018-01-15 15:55:55,963 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:56,044 | raxml      |       Result is DataRecord<lnl:[-6357.53808594], tree_size:[ 13.30106735], secs:[6]>
+DEBUG    | 2018-01-15 15:55:56,051 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:56,053 | subset     |       Added model to subset. Model: WAG+I+G, params: 2, sites:164, lnL:-6357.54, site_rate 13.301067
+DEBUG    | 2018-01-15 15:55:56,056 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:56,056 | subset     |       Finalising subset 3e8e489bf6c44d0fc0d24b5e2e786dd4
+DEBUG    | 2018-01-15 15:55:56,057 | subset     |       models not done: set(['LG+I+G'])
+DEBUG    | 2018-01-15 15:55:56,058 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:56,134 | raxml      |       Result is DataRecord<lnl:[-6272.51660156], tree_size:[ 15.64353371], secs:[3]>
+DEBUG    | 2018-01-15 15:55:56,140 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:55:56,526 | subset     |       Added model to subset. Model: LG+G, params: 1, sites:164, lnL:-6272.52, site_rate 15.643534
+DEBUG    | 2018-01-15 15:55:56,530 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:56,531 | subset     |       Finalising subset 9bb5662920fd9e08eca22f0cceb51e32
+DEBUG    | 2018-01-15 15:55:56,531 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:55:56,540 | subset     |       Best model for this subset: LG+G lnL: -6272.52 site_rate: 15.6435 params: 1 alpha: 0.655776 freqs: [ 0.079066 0.055941 0.041977 0.053052 0.012937 0.040767 0.071586 0.057337 0.022355 0.062157 0.099081 0.0646 0.022951 0.042302 0.04404 0.061197 0.053287 0.012066 0.034155 0.069146] rates: [ 3.99181992e-01 2.59945005e-01 3.71057987e-01 2.33736396e+00 9.10775006e-01 9.75241005e-01 1.94010603e+00 3.36984009e-01 1.40697002e-01 3.71239990e-01 5.03814995e-01 1.05552006e+00 2.38236994e-01 1.10586798e+00 4.43904114e+00 2.00908995e+00 1.69701993e-01 2.05613002e-01 2.39256692e+00 7.06048012e-01 1.16397999e-01 5.01968026e-01 2.63675404e+00 3.41785014e-01 3.66407990e-01 2.27869010e+00 1.19250000e-01 2.83448994e-01 5.94046688e+00 4.54623014e-01 4.95080017e-02 3.12263995e-01 8.05842996e-01 5.43694973e-01 5.57424009e-01 2.95273989e-01 1.60471007e-01 4.76673698e+00 4.96537000e-01 1.59238899e+00 5.08692026e-01 1.35001504e+00 4.23438120e+00 1.79830000e-01 6.42559975e-02 2.01432705e+00 3.48390013e-01 8.40680003e-02 1.51924998e-01 3.76403189e+00 1.87872899e+00 4.26100008e-02 5.74720025e-01 7.85870031e-02 5.87430000e-02 4.91483003e-01 4.92423391e+00 7.93424010e-01 8.70603025e-01 1.00379996e-02 1.41570000e-02 2.65711010e-01 2.39909999e-02 1.63540002e-02 3.70411992e-01 1.16467500e+00 3.99901986e-01 2.80680005e-02 1.26872003e-01 3.56529988e-02 7.96390027e-02 3.28600011e-03 5.34565985e-01 6.01499021e-01 3.01082999e-01 5.57799995e-01 1.24570001e-02 8.39206994e-01 1.03788102e+00 7.07869977e-02 2.61475301e+00 1.07377994e+00 6.29280984e-01 1.09448802e+00 1.83986402e+00 3.87693596e+00 2.51626015e-01 4.52010202e+00 6.84129968e-02 5.46953976e-01 3.03714991e+00 1.57061899e+00 3.36689986e-02 5.86241007e-01 1.14923096e+00 1.01429701e+00 2.21801996e-01 2.41650000e-01 1.97511002e-01 3.27582985e-01 3.98043990e-01 4.15670015e-02 6.54259995e-02 1.69702196e+00 1.63145006e-01 1.76640004e-02 3.93844008e-01 5.74670970e-01 5.67695022e-01 7.31069967e-02 1.12719998e-01 2.30097994e-01 2.92497993e-01 8.17400031e-03 4.15630005e-02 2.78555006e-01 1.31033003e-01 8.41249973e-02 1.84955001e-01 1.63392997e+00 1.21922001e-01 2.52124995e-01 5.13460003e-02 7.20259994e-02 1.02245003e-01 3.43988001e-01 6.54762983e-01 4.15502012e-01 6.40559971e-01 4.77833986e-01 9.29666996e-01 5.48649013e-01 5.60661018e-01 4.98336077e+00 1.11759000e-01 3.89240789e+00 1.49372995e-01 4.01311302e+00 1.04490197e+00 7.35090002e-02 6.01980016e-02 9.70727980e-01 1.04854003e-01 2.18349993e-01 1.00000000e+01 1.29118994e-01 5.92759418e+00 2.43465710e+00 2.33879000e-01 1.71176001e-01 2.84471005e-01 5.81862986e-01 2.81383008e-01 1.59895599e+00 6.16581023e-01 2.24600006e-02 3.66530001e-01 7.03047991e-01 1.06756699e+00 4.68639992e-02 1.23889998e-01 1.73913002e-01 1.68920505e+00 9.37630013e-02 3.25810999e-01 1.89721596e+00 6.53739989e-01 4.51968014e-01 1.78298295e+00 8.87060016e-02 3.39765012e-01 1.54944003e-01 2.30734897e+00 7.32822180e+00 6.14777029e-01 1.25656700e+00 5.36634982e-01 8.93319994e-02 8.41509998e-02 2.78427988e-01 6.07776690e+00 2.33693004e-01 3.76132011e-01 9.23729986e-02 1.32240996e-01 2.30856001e-01 2.05478096e+00 2.95969892e+00 1.77958995e-01 2.34116003e-01]
+INFO     | 2018-01-15 15:55:56,544 | progress   |       Finished subset 2/4, 50.00 percent done
+DEBUG    | 2018-01-15 15:55:56,546 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:56,636 | raxml      |       Result is DataRecord<lnl:[-6270.04052734], tree_size:[ 15.95991135], secs:[8]>
+DEBUG    | 2018-01-15 15:55:56,642 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:56,645 | subset     |       Added model to subset. Model: LG+I+G, params: 2, sites:164, lnL:-6270.04, site_rate 15.959911
+DEBUG    | 2018-01-15 15:55:56,648 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:56,648 | subset     |       Finalising subset 3e8e489bf6c44d0fc0d24b5e2e786dd4
+DEBUG    | 2018-01-15 15:55:56,648 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:55:56,655 | subset     |       Best model for this subset: LG+I+G lnL: -6270.04 site_rate: 15.9599 params: 2 alpha: 0.747118 freqs: [ 0.079066 0.055941 0.041977 0.053052 0.012937 0.040767 0.071586 0.057337 0.022355 0.062157 0.099081 0.0646 0.022951 0.042302 0.04404 0.061197 0.053287 0.012066 0.034155 0.069146] rates: [ 3.99181992e-01 2.59945005e-01 3.71057987e-01 2.33736396e+00 9.10775006e-01 9.75241005e-01 1.94010603e+00 3.36984009e-01 1.40697002e-01 3.71239990e-01 5.03814995e-01 1.05552006e+00 2.38236994e-01 1.10586798e+00 4.43904114e+00 2.00908995e+00 1.69701993e-01 2.05613002e-01 2.39256692e+00 7.06048012e-01 1.16397999e-01 5.01968026e-01 2.63675404e+00 3.41785014e-01 3.66407990e-01 2.27869010e+00 1.19250000e-01 2.83448994e-01 5.94046688e+00 4.54623014e-01 4.95080017e-02 3.12263995e-01 8.05842996e-01 5.43694973e-01 5.57424009e-01 2.95273989e-01 1.60471007e-01 4.76673698e+00 4.96537000e-01 1.59238899e+00 5.08692026e-01 1.35001504e+00 4.23438120e+00 1.79830000e-01 6.42559975e-02 2.01432705e+00 3.48390013e-01 8.40680003e-02 1.51924998e-01 3.76403189e+00 1.87872899e+00 4.26100008e-02 5.74720025e-01 7.85870031e-02 5.87430000e-02 4.91483003e-01 4.92423391e+00 7.93424010e-01 8.70603025e-01 1.00379996e-02 1.41570000e-02 2.65711010e-01 2.39909999e-02 1.63540002e-02 3.70411992e-01 1.16467500e+00 3.99901986e-01 2.80680005e-02 1.26872003e-01 3.56529988e-02 7.96390027e-02 3.28600011e-03 5.34565985e-01 6.01499021e-01 3.01082999e-01 5.57799995e-01 1.24570001e-02 8.39206994e-01 1.03788102e+00 7.07869977e-02 2.61475301e+00 1.07377994e+00 6.29280984e-01 1.09448802e+00 1.83986402e+00 3.87693596e+00 2.51626015e-01 4.52010202e+00 6.84129968e-02 5.46953976e-01 3.03714991e+00 1.57061899e+00 3.36689986e-02 5.86241007e-01 1.14923096e+00 1.01429701e+00 2.21801996e-01 2.41650000e-01 1.97511002e-01 3.27582985e-01 3.98043990e-01 4.15670015e-02 6.54259995e-02 1.69702196e+00 1.63145006e-01 1.76640004e-02 3.93844008e-01 5.74670970e-01 5.67695022e-01 7.31069967e-02 1.12719998e-01 2.30097994e-01 2.92497993e-01 8.17400031e-03 4.15630005e-02 2.78555006e-01 1.31033003e-01 8.41249973e-02 1.84955001e-01 1.63392997e+00 1.21922001e-01 2.52124995e-01 5.13460003e-02 7.20259994e-02 1.02245003e-01 3.43988001e-01 6.54762983e-01 4.15502012e-01 6.40559971e-01 4.77833986e-01 9.29666996e-01 5.48649013e-01 5.60661018e-01 4.98336077e+00 1.11759000e-01 3.89240789e+00 1.49372995e-01 4.01311302e+00 1.04490197e+00 7.35090002e-02 6.01980016e-02 9.70727980e-01 1.04854003e-01 2.18349993e-01 1.00000000e+01 1.29118994e-01 5.92759418e+00 2.43465710e+00 2.33879000e-01 1.71176001e-01 2.84471005e-01 5.81862986e-01 2.81383008e-01 1.59895599e+00 6.16581023e-01 2.24600006e-02 3.66530001e-01 7.03047991e-01 1.06756699e+00 4.68639992e-02 1.23889998e-01 1.73913002e-01 1.68920505e+00 9.37630013e-02 3.25810999e-01 1.89721596e+00 6.53739989e-01 4.51968014e-01 1.78298295e+00 8.87060016e-02 3.39765012e-01 1.54944003e-01 2.30734897e+00 7.32822180e+00 6.14777029e-01 1.25656700e+00 5.36634982e-01 8.93319994e-02 8.41509998e-02 2.78427988e-01 6.07776690e+00 2.33693004e-01 3.76132011e-01 9.23729986e-02 1.32240996e-01 2.30856001e-01 2.05478096e+00 2.95969892e+00 1.77958995e-01 2.34116003e-01]
+INFO     | 2018-01-15 15:55:56,921 | progress   |       Finished subset 3/4, 75.00 percent done
+DEBUG    | 2018-01-15 15:55:56,923 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:57,112 | raxml      |       Result is DataRecord<lnl:[-1221.44238281], tree_size:[ 34.98438644], secs:[17]>
+DEBUG    | 2018-01-15 15:55:57,119 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:55:57,121 | subset     |       Added model to subset. Model: LG+I+G, params: 2, sites:187, lnL:-1221.44, site_rate 34.984386
+DEBUG    | 2018-01-15 15:55:57,125 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:55:57,125 | subset     |       Finalising subset 044c04ffffeac4b427031ffb22812ad5
+DEBUG    | 2018-01-15 15:55:57,125 | subset     |       models not done: set(['WAG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:55:57,674 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:55:57,864 | raxml      |       Result is DataRecord<lnl:[-1223.29064941], tree_size:[ 20.40196228], secs:[3]>
+DEBUG    | 2018-01-15 15:56:00,898 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:56:01,127 | subset     |       Added model to subset. Model: LG+G, params: 1, sites:187, lnL:-1223.29, site_rate 20.401962
+DEBUG    | 2018-01-15 15:56:01,130 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:01,131 | subset     |       Finalising subset 044c04ffffeac4b427031ffb22812ad5
+DEBUG    | 2018-01-15 15:56:01,131 | subset     |       models not done: set(['WAG+I+G'])
+DEBUG    | 2018-01-15 15:56:01,133 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:01,352 | raxml      |       Result is DataRecord<lnl:[-1227.10107422], tree_size:[ 32.83050537], secs:[19]>
+DEBUG    | 2018-01-15 15:56:01,359 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:01,848 | subset     |       Added model to subset. Model: WAG+I+G, params: 2, sites:187, lnL:-1227.10, site_rate 32.830505
+DEBUG    | 2018-01-15 15:56:02,099 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:02,100 | subset     |       Finalising subset 044c04ffffeac4b427031ffb22812ad5
+DEBUG    | 2018-01-15 15:56:02,100 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:56:02,111 | subset     |       Best model for this subset: LG+I+G lnL: -1221.44 site_rate: 34.9844 params: 2 alpha: 0.544926 freqs: [ 0.079066 0.055941 0.041977 0.053052 0.012937 0.040767 0.071586 0.057337 0.022355 0.062157 0.099081 0.0646 0.022951 0.042302 0.04404 0.061197 0.053287 0.012066 0.034155 0.069146] rates: [ 3.99181992e-01 2.59945005e-01 3.71057987e-01 2.33736396e+00 9.10775006e-01 9.75241005e-01 1.94010603e+00 3.36984009e-01 1.40697002e-01 3.71239990e-01 5.03814995e-01 1.05552006e+00 2.38236994e-01 1.10586798e+00 4.43904114e+00 2.00908995e+00 1.69701993e-01 2.05613002e-01 2.39256692e+00 7.06048012e-01 1.16397999e-01 5.01968026e-01 2.63675404e+00 3.41785014e-01 3.66407990e-01 2.27869010e+00 1.19250000e-01 2.83448994e-01 5.94046688e+00 4.54623014e-01 4.95080017e-02 3.12263995e-01 8.05842996e-01 5.43694973e-01 5.57424009e-01 2.95273989e-01 1.60471007e-01 4.76673698e+00 4.96537000e-01 1.59238899e+00 5.08692026e-01 1.35001504e+00 4.23438120e+00 1.79830000e-01 6.42559975e-02 2.01432705e+00 3.48390013e-01 8.40680003e-02 1.51924998e-01 3.76403189e+00 1.87872899e+00 4.26100008e-02 5.74720025e-01 7.85870031e-02 5.87430000e-02 4.91483003e-01 4.92423391e+00 7.93424010e-01 8.70603025e-01 1.00379996e-02 1.41570000e-02 2.65711010e-01 2.39909999e-02 1.63540002e-02 3.70411992e-01 1.16467500e+00 3.99901986e-01 2.80680005e-02 1.26872003e-01 3.56529988e-02 7.96390027e-02 3.28600011e-03 5.34565985e-01 6.01499021e-01 3.01082999e-01 5.57799995e-01 1.24570001e-02 8.39206994e-01 1.03788102e+00 7.07869977e-02 2.61475301e+00 1.07377994e+00 6.29280984e-01 1.09448802e+00 1.83986402e+00 3.87693596e+00 2.51626015e-01 4.52010202e+00 6.84129968e-02 5.46953976e-01 3.03714991e+00 1.57061899e+00 3.36689986e-02 5.86241007e-01 1.14923096e+00 1.01429701e+00 2.21801996e-01 2.41650000e-01 1.97511002e-01 3.27582985e-01 3.98043990e-01 4.15670015e-02 6.54259995e-02 1.69702196e+00 1.63145006e-01 1.76640004e-02 3.93844008e-01 5.74670970e-01 5.67695022e-01 7.31069967e-02 1.12719998e-01 2.30097994e-01 2.92497993e-01 8.17400031e-03 4.15630005e-02 2.78555006e-01 1.31033003e-01 8.41249973e-02 1.84955001e-01 1.63392997e+00 1.21922001e-01 2.52124995e-01 5.13460003e-02 7.20259994e-02 1.02245003e-01 3.43988001e-01 6.54762983e-01 4.15502012e-01 6.40559971e-01 4.77833986e-01 9.29666996e-01 5.48649013e-01 5.60661018e-01 4.98336077e+00 1.11759000e-01 3.89240789e+00 1.49372995e-01 4.01311302e+00 1.04490197e+00 7.35090002e-02 6.01980016e-02 9.70727980e-01 1.04854003e-01 2.18349993e-01 1.00000000e+01 1.29118994e-01 5.92759418e+00 2.43465710e+00 2.33879000e-01 1.71176001e-01 2.84471005e-01 5.81862986e-01 2.81383008e-01 1.59895599e+00 6.16581023e-01 2.24600006e-02 3.66530001e-01 7.03047991e-01 1.06756699e+00 4.68639992e-02 1.23889998e-01 1.73913002e-01 1.68920505e+00 9.37630013e-02 3.25810999e-01 1.89721596e+00 6.53739989e-01 4.51968014e-01 1.78298295e+00 8.87060016e-02 3.39765012e-01 1.54944003e-01 2.30734897e+00 7.32822180e+00 6.14777029e-01 1.25656700e+00 5.36634982e-01 8.93319994e-02 8.41509998e-02 2.78427988e-01 6.07776690e+00 2.33693004e-01 3.76132011e-01 9.23729986e-02 1.32240996e-01 2.30856001e-01 2.05478096e+00 2.95969892e+00 1.77958995e-01 2.34116003e-01]
+INFO     | 2018-01-15 15:56:02,116 | progress   |       Finished subset 4/4, 100.00 percent done
+DEBUG    | 2018-01-15 15:56:02,116 | subset     |       Finalising subset 044c04ffffeac4b427031ffb22812ad5
+DEBUG    | 2018-01-15 15:56:02,116 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:56:02,116 | subset     |       Finalising subset 9bb5662920fd9e08eca22f0cceb51e32
+DEBUG    | 2018-01-15 15:56:02,117 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:56:02,117 | subset     |       Finalising subset 3e8e489bf6c44d0fc0d24b5e2e786dd4
+DEBUG    | 2018-01-15 15:56:02,117 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:56:02,117 | subset     |       Finalising subset 3f4a93923f60e527200c9325b0cece4b
+DEBUG    | 2018-01-15 15:56:02,118 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:56:02,118 | scheme     |       Calculating number of parameters in scheme. Total parameters from subset models: 7
+DEBUG    | 2018-01-15 15:56:02,118 | scheme     |       Total parameters from brlens: 199
+DEBUG    | 2018-01-15 15:56:02,119 | scheme     |       Parameters from subset multipliers: 3
+DEBUG    | 2018-01-15 15:56:02,119 | scheme     |       Grand total parameters: 209
+DEBUG    | 2018-01-15 15:56:02,119 | scheme     |       n: 679 K: 209 lnL: -20034
+INFO     | 2018-01-15 15:56:02,124 | analysis_m |    *** Relaxed clustering algorithm step 1 of up to 3 ***
+INFO     | 2018-01-15 15:56:02,147 | analysis_m |       Measuring the similarity of 6 subset pairs
+INFO     | 2018-01-15 15:56:02,165 | analysis_m |       Choosing the 1 most similar subset pairs
+INFO     | 2018-01-15 15:56:02,166 | analysis_m |       Analysing 1 new subset pairs
+DEBUG    | 2018-01-15 15:56:02,198 | subset     |       Created Subset(..)
+DEBUG    | 2018-01-15 15:56:02,198 | analysis   |       chunk size (in number of subsets) = 250
+DEBUG    | 2018-01-15 15:56:02,201 | subset     |       Finalising subset ab17715e078ae350fdb9b314359c6948
+DEBUG    | 2018-01-15 15:56:02,201 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'WAG+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:02,202 | alignment  |       Max site in data_blocks: 515; max site in alignment: 679
+DEBUG    | 2018-01-15 15:56:02,205 | alignment  |       Writing phylip file './analysis/phylofiles/ab17715e078ae350fdb9b314359c6948.phy'
+DEBUG    | 2018-01-15 15:56:02,215 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:02,215 | raxml_mode |       Model: WAG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:56:02,224 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:02,224 | raxml_mode |       Model: LG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:56:02,233 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:56:02,233 | raxml_mode |       Model: WAG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:56:02,239 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:56:02,239 | raxml_mode |       Model: LG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:56:02,240 | threadpool |       Creating 4 threads for 4 tasks
+DEBUG    | 2018-01-15 15:56:02,240 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/ab17715e078ae350fdb9b314359c6948.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAIWAG -n ab17715e078ae350fdb9b314359c6948_WAG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:02,242 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/ab17715e078ae350fdb9b314359c6948.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAILG -n ab17715e078ae350fdb9b314359c6948_LG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:02,244 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/ab17715e078ae350fdb9b314359c6948.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMALG -n ab17715e078ae350fdb9b314359c6948_LG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:02,243 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/ab17715e078ae350fdb9b314359c6948.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAWAG -n ab17715e078ae350fdb9b314359c6948_WAG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:10,094 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:10,185 | raxml      |       Result is DataRecord<lnl:[-12715.07617188], tree_size:[ 13.30106735], secs:[7]>
+DEBUG    | 2018-01-15 15:56:10,192 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:10,195 | subset     |       Added model to subset. Model: WAG+I+G, params: 2, sites:328, lnL:-12715.08, site_rate 13.301067
+DEBUG    | 2018-01-15 15:56:10,198 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:10,198 | subset     |       Finalising subset ab17715e078ae350fdb9b314359c6948
+DEBUG    | 2018-01-15 15:56:10,198 | subset     |       models not done: set(['LG+I+G', 'WAG+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:10,485 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:10,578 | raxml      |       Result is DataRecord<lnl:[-12720.56835938], tree_size:[ 12.42931271], secs:[3]>
+DEBUG    | 2018-01-15 15:56:10,585 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:56:10,589 | subset     |       Added model to subset. Model: WAG+G, params: 1, sites:328, lnL:-12720.57, site_rate 12.429313
+DEBUG    | 2018-01-15 15:56:10,593 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:10,593 | subset     |       Finalising subset ab17715e078ae350fdb9b314359c6948
+DEBUG    | 2018-01-15 15:56:10,593 | subset     |       models not done: set(['LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:10,596 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:10,687 | raxml      |       Result is DataRecord<lnl:[-12540.08105469], tree_size:[ 15.96203423], secs:[8]>
+DEBUG    | 2018-01-15 15:56:10,694 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:10,697 | subset     |       Added model to subset. Model: LG+I+G, params: 2, sites:328, lnL:-12540.08, site_rate 15.962034
+DEBUG    | 2018-01-15 15:56:10,700 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:10,700 | subset     |       Finalising subset ab17715e078ae350fdb9b314359c6948
+DEBUG    | 2018-01-15 15:56:10,701 | subset     |       models not done: set(['LG+G'])
+DEBUG    | 2018-01-15 15:56:10,703 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:10,792 | raxml      |       Result is DataRecord<lnl:[-12545.73632812], tree_size:[ 15.64258862], secs:[3]>
+DEBUG    | 2018-01-15 15:56:10,798 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:56:10,803 | subset     |       Added model to subset. Model: LG+G, params: 1, sites:328, lnL:-12545.74, site_rate 15.642589
+DEBUG    | 2018-01-15 15:56:10,806 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:10,807 | subset     |       Finalising subset ab17715e078ae350fdb9b314359c6948
+DEBUG    | 2018-01-15 15:56:10,807 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:56:10,814 | subset     |       Best model for this subset: LG+I+G lnL: -12540.1 site_rate: 15.962 params: 2 alpha: 0.746609 freqs: [ 0.079066 0.055941 0.041977 0.053052 0.012937 0.040767 0.071586 0.057337 0.022355 0.062157 0.099081 0.0646 0.022951 0.042302 0.04404 0.061197 0.053287 0.012066 0.034155 0.069146] rates: [ 3.99181992e-01 2.59945005e-01 3.71057987e-01 2.33736396e+00 9.10775006e-01 9.75241005e-01 1.94010603e+00 3.36984009e-01 1.40697002e-01 3.71239990e-01 5.03814995e-01 1.05552006e+00 2.38236994e-01 1.10586798e+00 4.43904114e+00 2.00908995e+00 1.69701993e-01 2.05613002e-01 2.39256692e+00 7.06048012e-01 1.16397999e-01 5.01968026e-01 2.63675404e+00 3.41785014e-01 3.66407990e-01 2.27869010e+00 1.19250000e-01 2.83448994e-01 5.94046688e+00 4.54623014e-01 4.95080017e-02 3.12263995e-01 8.05842996e-01 5.43694973e-01 5.57424009e-01 2.95273989e-01 1.60471007e-01 4.76673698e+00 4.96537000e-01 1.59238899e+00 5.08692026e-01 1.35001504e+00 4.23438120e+00 1.79830000e-01 6.42559975e-02 2.01432705e+00 3.48390013e-01 8.40680003e-02 1.51924998e-01 3.76403189e+00 1.87872899e+00 4.26100008e-02 5.74720025e-01 7.85870031e-02 5.87430000e-02 4.91483003e-01 4.92423391e+00 7.93424010e-01 8.70603025e-01 1.00379996e-02 1.41570000e-02 2.65711010e-01 2.39909999e-02 1.63540002e-02 3.70411992e-01 1.16467500e+00 3.99901986e-01 2.80680005e-02 1.26872003e-01 3.56529988e-02 7.96390027e-02 3.28600011e-03 5.34565985e-01 6.01499021e-01 3.01082999e-01 5.57799995e-01 1.24570001e-02 8.39206994e-01 1.03788102e+00 7.07869977e-02 2.61475301e+00 1.07377994e+00 6.29280984e-01 1.09448802e+00 1.83986402e+00 3.87693596e+00 2.51626015e-01 4.52010202e+00 6.84129968e-02 5.46953976e-01 3.03714991e+00 1.57061899e+00 3.36689986e-02 5.86241007e-01 1.14923096e+00 1.01429701e+00 2.21801996e-01 2.41650000e-01 1.97511002e-01 3.27582985e-01 3.98043990e-01 4.15670015e-02 6.54259995e-02 1.69702196e+00 1.63145006e-01 1.76640004e-02 3.93844008e-01 5.74670970e-01 5.67695022e-01 7.31069967e-02 1.12719998e-01 2.30097994e-01 2.92497993e-01 8.17400031e-03 4.15630005e-02 2.78555006e-01 1.31033003e-01 8.41249973e-02 1.84955001e-01 1.63392997e+00 1.21922001e-01 2.52124995e-01 5.13460003e-02 7.20259994e-02 1.02245003e-01 3.43988001e-01 6.54762983e-01 4.15502012e-01 6.40559971e-01 4.77833986e-01 9.29666996e-01 5.48649013e-01 5.60661018e-01 4.98336077e+00 1.11759000e-01 3.89240789e+00 1.49372995e-01 4.01311302e+00 1.04490197e+00 7.35090002e-02 6.01980016e-02 9.70727980e-01 1.04854003e-01 2.18349993e-01 1.00000000e+01 1.29118994e-01 5.92759418e+00 2.43465710e+00 2.33879000e-01 1.71176001e-01 2.84471005e-01 5.81862986e-01 2.81383008e-01 1.59895599e+00 6.16581023e-01 2.24600006e-02 3.66530001e-01 7.03047991e-01 1.06756699e+00 4.68639992e-02 1.23889998e-01 1.73913002e-01 1.68920505e+00 9.37630013e-02 3.25810999e-01 1.89721596e+00 6.53739989e-01 4.51968014e-01 1.78298295e+00 8.87060016e-02 3.39765012e-01 1.54944003e-01 2.30734897e+00 7.32822180e+00 6.14777029e-01 1.25656700e+00 5.36634982e-01 8.93319994e-02 8.41509998e-02 2.78427988e-01 6.07776690e+00 2.33693004e-01 3.76132011e-01 9.23729986e-02 1.32240996e-01 2.30856001e-01 2.05478096e+00 2.95969892e+00 1.77958995e-01 2.34116003e-01]
+INFO     | 2018-01-15 15:56:10,818 | progress   |       Finished subset 1/1, 100.00 percent done
+DEBUG    | 2018-01-15 15:56:10,818 | subset     |       Finalising subset ab17715e078ae350fdb9b314359c6948
+DEBUG    | 2018-01-15 15:56:10,819 | subset     |       models not done: set([])
+INFO     | 2018-01-15 15:56:10,819 | analysis_m |       Finding the best partitioning scheme
+DEBUG    | 2018-01-15 15:56:10,819 | scheme     |       Calculating number of parameters in scheme. Total parameters from subset models: 5
+DEBUG    | 2018-01-15 15:56:10,820 | scheme     |       Total parameters from brlens: 199
+DEBUG    | 2018-01-15 15:56:10,820 | scheme     |       Parameters from subset multipliers: 2
+DEBUG    | 2018-01-15 15:56:10,820 | scheme     |       Grand total parameters: 206
+DEBUG    | 2018-01-15 15:56:10,821 | scheme     |       n: 679 K: 206 lnL: -20034
+DEBUG    | 2018-01-15 15:56:10,822 | neighbour  |       C matrix: [[ 0. inf inf inf] [ inf 0. inf -12.47773843] [ inf inf 0. inf] [ inf -12.47773843 inf 0. ]]
+DEBUG    | 2018-01-15 15:56:10,823 | neighbour  |       C matrix dimensions: (4, 4)
+DEBUG    | 2018-01-15 15:56:10,823 | neighbour  |       Number of subsets: 4
+DEBUG    | 2018-01-15 15:56:10,824 | neighbour  |       Location of best_change in c_matrix: (array([1, 3]), array([3, 1]))
+DEBUG    | 2018-01-15 15:56:10,825 | neighbour  |       Subsets to merge: 1 and 3
+INFO     | 2018-01-15 15:56:10,825 | analysis_m |       Combining subsets: 'S5-4' and 'S5-3'
+DEBUG    | 2018-01-15 15:56:10,825 | analysis_m |       This improves the aicc score by: 12.4777384265
+DEBUG    | 2018-01-15 15:56:10,826 | neighbour  |       Updating subset list
+DEBUG    | 2018-01-15 15:56:10,826 | neighbour  |       Original subset list: ['S5', 'S5-4', 'S5-2', 'S5-3']
+DEBUG    | 2018-01-15 15:56:10,827 | neighbour  |       Subsets to remove: ['S5-4', 'S5-3']
+DEBUG    | 2018-01-15 15:56:10,827 | neighbour  |       Combined subsets to add: ['S5-4, S5-3']
+DEBUG    | 2018-01-15 15:56:10,827 | scheme     |       Calculating number of parameters in scheme. Total parameters from subset models: 5
+DEBUG    | 2018-01-15 15:56:10,827 | scheme     |       Total parameters from brlens: 199
+DEBUG    | 2018-01-15 15:56:10,828 | scheme     |       Parameters from subset multipliers: 2
+DEBUG    | 2018-01-15 15:56:10,828 | scheme     |       Grand total parameters: 206
+DEBUG    | 2018-01-15 15:56:10,828 | scheme     |       n: 679 K: 206 lnL: -20034
+INFO     | 2018-01-15 15:56:10,828 | analysis_m |       The best scheme has 3 subsets and improves the aicc score by 12.48 to 40660.8
+INFO     | 2018-01-15 15:56:10,832 | analysis_m |    *** Relaxed clustering algorithm step 2 of up to 3 ***
+INFO     | 2018-01-15 15:56:10,832 | analysis_m |       Measuring the similarity of 3 subset pairs
+INFO     | 2018-01-15 15:56:10,832 | analysis_m |       Choosing the 1 most similar subset pairs
+INFO     | 2018-01-15 15:56:10,832 | analysis_m |       Analysing 1 new subset pairs
+DEBUG    | 2018-01-15 15:56:10,833 | subset     |       Created Subset(..)
+DEBUG    | 2018-01-15 15:56:10,833 | analysis   |       chunk size (in number of subsets) = 250
+DEBUG    | 2018-01-15 15:56:10,834 | subset     |       Finalising subset d3501cde5da2f926c5b50fb75e95b86d
+DEBUG    | 2018-01-15 15:56:10,834 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'WAG+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:10,834 | alignment  |       Max site in data_blocks: 679; max site in alignment: 679
+DEBUG    | 2018-01-15 15:56:10,837 | alignment  |       Writing phylip file './analysis/phylofiles/d3501cde5da2f926c5b50fb75e95b86d.phy'
+DEBUG    | 2018-01-15 15:56:10,845 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:10,845 | raxml_mode |       Model: WAG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:56:10,851 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:10,851 | raxml_mode |       Model: LG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:56:10,857 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:56:10,857 | raxml_mode |       Model: WAG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:56:10,864 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:56:10,864 | raxml_mode |       Model: LG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:56:10,864 | threadpool |       Creating 4 threads for 4 tasks
+DEBUG    | 2018-01-15 15:56:10,865 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/d3501cde5da2f926c5b50fb75e95b86d.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAILG -n d3501cde5da2f926c5b50fb75e95b86d_LG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:10,865 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/d3501cde5da2f926c5b50fb75e95b86d.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAIWAG -n d3501cde5da2f926c5b50fb75e95b86d_WAG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:10,867 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/d3501cde5da2f926c5b50fb75e95b86d.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAWAG -n d3501cde5da2f926c5b50fb75e95b86d_WAG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:10,868 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/d3501cde5da2f926c5b50fb75e95b86d.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMALG -n d3501cde5da2f926c5b50fb75e95b86d_LG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:17,281 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:17,374 | raxml      |       Result is DataRecord<lnl:[-19080.515625], tree_size:[ 12.42917919], secs:[6]>
+DEBUG    | 2018-01-15 15:56:17,382 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:56:17,385 | subset     |       Added model to subset. Model: WAG+G, params: 1, sites:492, lnL:-19080.52, site_rate 12.429179
+DEBUG    | 2018-01-15 15:56:17,389 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:17,389 | subset     |       Finalising subset d3501cde5da2f926c5b50fb75e95b86d
+DEBUG    | 2018-01-15 15:56:17,389 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:22,571 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:22,650 | raxml      |       Result is DataRecord<lnl:[-19080.51953125], tree_size:[ 12.4311676], secs:[11]>
+DEBUG    | 2018-01-15 15:56:22,656 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:22,659 | subset     |       Added model to subset. Model: WAG+I+G, params: 2, sites:492, lnL:-19080.52, site_rate 12.431168
+DEBUG    | 2018-01-15 15:56:22,662 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:22,662 | subset     |       Finalising subset d3501cde5da2f926c5b50fb75e95b86d
+DEBUG    | 2018-01-15 15:56:22,663 | subset     |       models not done: set(['LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:26,064 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:26,159 | raxml      |       Result is DataRecord<lnl:[-18818.22851562], tree_size:[ 15.69901943], secs:[15]>
+DEBUG    | 2018-01-15 15:56:26,166 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:26,195 | subset     |       Added model to subset. Model: LG+I+G, params: 2, sites:492, lnL:-18818.23, site_rate 15.699019
+DEBUG    | 2018-01-15 15:56:26,198 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:26,198 | subset     |       Finalising subset d3501cde5da2f926c5b50fb75e95b86d
+DEBUG    | 2018-01-15 15:56:26,198 | subset     |       models not done: set(['LG+G'])
+DEBUG    | 2018-01-15 15:56:26,201 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:26,290 | raxml      |       Result is DataRecord<lnl:[-18818.2265625], tree_size:[ 15.69145679], secs:[8]>
+DEBUG    | 2018-01-15 15:56:26,297 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:56:26,303 | subset     |       Added model to subset. Model: LG+G, params: 1, sites:492, lnL:-18818.23, site_rate 15.691457
+DEBUG    | 2018-01-15 15:56:26,306 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:26,306 | subset     |       Finalising subset d3501cde5da2f926c5b50fb75e95b86d
+DEBUG    | 2018-01-15 15:56:26,307 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:56:26,314 | subset     |       Best model for this subset: LG+G lnL: -18818.2 site_rate: 15.6915 params: 1 alpha: 0.650208 freqs: [ 0.079066 0.055941 0.041977 0.053052 0.012937 0.040767 0.071586 0.057337 0.022355 0.062157 0.099081 0.0646 0.022951 0.042302 0.04404 0.061197 0.053287 0.012066 0.034155 0.069146] rates: [ 3.99181992e-01 2.59945005e-01 3.71057987e-01 2.33736396e+00 9.10775006e-01 9.75241005e-01 1.94010603e+00 3.36984009e-01 1.40697002e-01 3.71239990e-01 5.03814995e-01 1.05552006e+00 2.38236994e-01 1.10586798e+00 4.43904114e+00 2.00908995e+00 1.69701993e-01 2.05613002e-01 2.39256692e+00 7.06048012e-01 1.16397999e-01 5.01968026e-01 2.63675404e+00 3.41785014e-01 3.66407990e-01 2.27869010e+00 1.19250000e-01 2.83448994e-01 5.94046688e+00 4.54623014e-01 4.95080017e-02 3.12263995e-01 8.05842996e-01 5.43694973e-01 5.57424009e-01 2.95273989e-01 1.60471007e-01 4.76673698e+00 4.96537000e-01 1.59238899e+00 5.08692026e-01 1.35001504e+00 4.23438120e+00 1.79830000e-01 6.42559975e-02 2.01432705e+00 3.48390013e-01 8.40680003e-02 1.51924998e-01 3.76403189e+00 1.87872899e+00 4.26100008e-02 5.74720025e-01 7.85870031e-02 5.87430000e-02 4.91483003e-01 4.92423391e+00 7.93424010e-01 8.70603025e-01 1.00379996e-02 1.41570000e-02 2.65711010e-01 2.39909999e-02 1.63540002e-02 3.70411992e-01 1.16467500e+00 3.99901986e-01 2.80680005e-02 1.26872003e-01 3.56529988e-02 7.96390027e-02 3.28600011e-03 5.34565985e-01 6.01499021e-01 3.01082999e-01 5.57799995e-01 1.24570001e-02 8.39206994e-01 1.03788102e+00 7.07869977e-02 2.61475301e+00 1.07377994e+00 6.29280984e-01 1.09448802e+00 1.83986402e+00 3.87693596e+00 2.51626015e-01 4.52010202e+00 6.84129968e-02 5.46953976e-01 3.03714991e+00 1.57061899e+00 3.36689986e-02 5.86241007e-01 1.14923096e+00 1.01429701e+00 2.21801996e-01 2.41650000e-01 1.97511002e-01 3.27582985e-01 3.98043990e-01 4.15670015e-02 6.54259995e-02 1.69702196e+00 1.63145006e-01 1.76640004e-02 3.93844008e-01 5.74670970e-01 5.67695022e-01 7.31069967e-02 1.12719998e-01 2.30097994e-01 2.92497993e-01 8.17400031e-03 4.15630005e-02 2.78555006e-01 1.31033003e-01 8.41249973e-02 1.84955001e-01 1.63392997e+00 1.21922001e-01 2.52124995e-01 5.13460003e-02 7.20259994e-02 1.02245003e-01 3.43988001e-01 6.54762983e-01 4.15502012e-01 6.40559971e-01 4.77833986e-01 9.29666996e-01 5.48649013e-01 5.60661018e-01 4.98336077e+00 1.11759000e-01 3.89240789e+00 1.49372995e-01 4.01311302e+00 1.04490197e+00 7.35090002e-02 6.01980016e-02 9.70727980e-01 1.04854003e-01 2.18349993e-01 1.00000000e+01 1.29118994e-01 5.92759418e+00 2.43465710e+00 2.33879000e-01 1.71176001e-01 2.84471005e-01 5.81862986e-01 2.81383008e-01 1.59895599e+00 6.16581023e-01 2.24600006e-02 3.66530001e-01 7.03047991e-01 1.06756699e+00 4.68639992e-02 1.23889998e-01 1.73913002e-01 1.68920505e+00 9.37630013e-02 3.25810999e-01 1.89721596e+00 6.53739989e-01 4.51968014e-01 1.78298295e+00 8.87060016e-02 3.39765012e-01 1.54944003e-01 2.30734897e+00 7.32822180e+00 6.14777029e-01 1.25656700e+00 5.36634982e-01 8.93319994e-02 8.41509998e-02 2.78427988e-01 6.07776690e+00 2.33693004e-01 3.76132011e-01 9.23729986e-02 1.32240996e-01 2.30856001e-01 2.05478096e+00 2.95969892e+00 1.77958995e-01 2.34116003e-01]
+INFO     | 2018-01-15 15:56:26,318 | progress   |       Finished subset 1/1, 100.00 percent done
+DEBUG    | 2018-01-15 15:56:26,318 | subset     |       Finalising subset d3501cde5da2f926c5b50fb75e95b86d
+DEBUG    | 2018-01-15 15:56:26,319 | subset     |       models not done: set([])
+INFO     | 2018-01-15 15:56:26,319 | analysis_m |       Finding the best partitioning scheme
+DEBUG    | 2018-01-15 15:56:26,319 | scheme     |       Calculating number of parameters in scheme. Total parameters from subset models: 3
+DEBUG    | 2018-01-15 15:56:26,320 | scheme     |       Total parameters from brlens: 199
+DEBUG    | 2018-01-15 15:56:26,320 | scheme     |       Parameters from subset multipliers: 1
+DEBUG    | 2018-01-15 15:56:26,320 | scheme     |       Grand total parameters: 203
+DEBUG    | 2018-01-15 15:56:26,320 | scheme     |       n: 679 K: 203 lnL: -20039
+DEBUG    | 2018-01-15 15:56:26,322 | neighbour  |       C matrix: [[ 0. inf -1.06231239] [ inf 0. inf] [-1.06231239 inf 0. ]]
+DEBUG    | 2018-01-15 15:56:26,322 | neighbour  |       C matrix dimensions: (3, 3)
+DEBUG    | 2018-01-15 15:56:26,322 | neighbour  |       Number of subsets: 3
+DEBUG    | 2018-01-15 15:56:26,324 | neighbour  |       Location of best_change in c_matrix: (array([0, 2]), array([2, 0]))
+DEBUG    | 2018-01-15 15:56:26,324 | neighbour  |       Subsets to merge: 0 and 2
+INFO     | 2018-01-15 15:56:26,324 | analysis_m |       Combining subsets: 'S5' and 'S5-4, S5-3'
+DEBUG    | 2018-01-15 15:56:26,325 | analysis_m |       This improves the aicc score by: 1.06231238849
+DEBUG    | 2018-01-15 15:56:26,325 | neighbour  |       Updating subset list
+DEBUG    | 2018-01-15 15:56:26,326 | neighbour  |       Original subset list: ['S5', 'S5-2', 'S5-4, S5-3']
+DEBUG    | 2018-01-15 15:56:26,326 | neighbour  |       Subsets to remove: ['S5', 'S5-4, S5-3']
+DEBUG    | 2018-01-15 15:56:26,326 | neighbour  |       Combined subsets to add: ['S5, S5-4, S5-3']
+DEBUG    | 2018-01-15 15:56:26,326 | scheme     |       Calculating number of parameters in scheme. Total parameters from subset models: 3
+DEBUG    | 2018-01-15 15:56:26,327 | scheme     |       Total parameters from brlens: 199
+DEBUG    | 2018-01-15 15:56:26,327 | scheme     |       Parameters from subset multipliers: 1
+DEBUG    | 2018-01-15 15:56:26,327 | scheme     |       Grand total parameters: 203
+DEBUG    | 2018-01-15 15:56:26,327 | scheme     |       n: 679 K: 203 lnL: -20039
+INFO     | 2018-01-15 15:56:26,328 | analysis_m |       The best scheme has 2 subsets and improves the aicc score by 1.06 to 40659.7
+INFO     | 2018-01-15 15:56:26,330 | analysis_m |    *** Relaxed clustering algorithm step 3 of up to 3 ***
+INFO     | 2018-01-15 15:56:26,330 | analysis_m |       Measuring the similarity of 1 subset pairs
+INFO     | 2018-01-15 15:56:26,331 | analysis_m |       Choosing the 1 most similar subset pairs
+INFO     | 2018-01-15 15:56:26,331 | analysis_m |       Analysing 1 new subset pairs
+DEBUG    | 2018-01-15 15:56:26,331 | analysis   |       chunk size (in number of subsets) = 250
+DEBUG    | 2018-01-15 15:56:26,333 | subset     |       Finalising subset 340e1443c796a0abd2677e137439b7f5
+DEBUG    | 2018-01-15 15:56:26,333 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'WAG+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:26,333 | alignment  |       Max site in data_blocks: 679; max site in alignment: 679
+DEBUG    | 2018-01-15 15:56:26,335 | alignment  |       Writing phylip file './analysis/phylofiles/340e1443c796a0abd2677e137439b7f5.phy'
+DEBUG    | 2018-01-15 15:56:26,343 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:26,344 | raxml_mode |       Model: WAG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:56:26,350 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:26,350 | raxml_mode |       Model: LG+I+G Difficulty: 3004
+DEBUG    | 2018-01-15 15:56:26,356 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:56:26,356 | raxml_mode |       Model: WAG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:56:26,362 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:56:26,362 | raxml_mode |       Model: LG+G Difficulty: 2002
+DEBUG    | 2018-01-15 15:56:26,363 | threadpool |       Creating 4 threads for 4 tasks
+DEBUG    | 2018-01-15 15:56:26,363 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/340e1443c796a0abd2677e137439b7f5.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAIWAG -n 340e1443c796a0abd2677e137439b7f5_WAG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:26,364 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/340e1443c796a0abd2677e137439b7f5.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAILG -n 340e1443c796a0abd2677e137439b7f5_LG+I+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:26,365 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/340e1443c796a0abd2677e137439b7f5.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMAWAG -n 340e1443c796a0abd2677e137439b7f5_WAG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:26,365 | util       |       Running '/home-fn/users/nscc1082/software/partitionfinder-2.1.1/programs/raxml.linux -f B -s './analysis/phylofiles/340e1443c796a0abd2677e137439b7f5.phy' -t './analysis/start_tree/RAxML_result.BLTREE' -m PROTGAMMALG -n 340e1443c796a0abd2677e137439b7f5_LG+G.txt -w '/home-fn/users/nsfn1362_LHW/test/procManage/dudu/partition/analysis/phylofiles' -e 1.0 -O '
+DEBUG    | 2018-01-15 15:56:34,065 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:34,145 | raxml      |       Result is DataRecord<lnl:[-20324.61132812], tree_size:[ 13.25462246], secs:[7]>
+DEBUG    | 2018-01-15 15:56:34,152 | model_util |       Model: WAG+G Params: 1
+DEBUG    | 2018-01-15 15:56:34,155 | subset     |       Added model to subset. Model: WAG+G, params: 1, sites:679, lnL:-20324.61, site_rate 13.254622
+DEBUG    | 2018-01-15 15:56:34,158 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:34,159 | subset     |       Finalising subset 340e1443c796a0abd2677e137439b7f5
+DEBUG    | 2018-01-15 15:56:34,159 | subset     |       models not done: set(['WAG+I+G', 'LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:44,664 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:44,758 | raxml      |       Result is DataRecord<lnl:[-20324.61523438], tree_size:[ 13.25800133], secs:[18]>
+DEBUG    | 2018-01-15 15:56:44,765 | model_util |       Model: WAG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:44,778 | subset     |       Added model to subset. Model: WAG+I+G, params: 2, sites:679, lnL:-20324.62, site_rate 13.258001
+DEBUG    | 2018-01-15 15:56:44,781 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:44,781 | subset     |       Finalising subset 340e1443c796a0abd2677e137439b7f5
+DEBUG    | 2018-01-15 15:56:44,782 | subset     |       models not done: set(['LG+I+G', 'LG+G'])
+DEBUG    | 2018-01-15 15:56:45,626 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:45,716 | raxml      |       Result is DataRecord<lnl:[-20055.01367188], tree_size:[ 16.19046402], secs:[19]>
+DEBUG    | 2018-01-15 15:56:45,723 | model_util |       Model: LG+I+G Params: 2
+DEBUG    | 2018-01-15 15:56:45,725 | subset     |       Added model to subset. Model: LG+I+G, params: 2, sites:679, lnL:-20055.01, site_rate 16.190464
+DEBUG    | 2018-01-15 15:56:45,729 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:45,730 | subset     |       Finalising subset 340e1443c796a0abd2677e137439b7f5
+DEBUG    | 2018-01-15 15:56:45,730 | subset     |       models not done: set(['LG+G'])
+DEBUG    | 2018-01-15 15:56:45,732 | raxml      |       Parsing raxml output...
+DEBUG    | 2018-01-15 15:56:45,807 | raxml      |       Result is DataRecord<lnl:[-20055.01171875], tree_size:[ 16.18403053], secs:[11]>
+DEBUG    | 2018-01-15 15:56:45,813 | model_util |       Model: LG+G Params: 1
+DEBUG    | 2018-01-15 15:56:45,818 | subset     |       Added model to subset. Model: LG+G, params: 1, sites:679, lnL:-20055.01, site_rate 16.184031
+DEBUG    | 2018-01-15 15:56:45,821 | util       |       deleted 1 files
+DEBUG    | 2018-01-15 15:56:45,822 | subset     |       Finalising subset 340e1443c796a0abd2677e137439b7f5
+DEBUG    | 2018-01-15 15:56:45,822 | subset     |       models not done: set([])
+DEBUG    | 2018-01-15 15:56:45,829 | subset     |       Best model for this subset: LG+G lnL: -20055.0 site_rate: 16.184 params: 1 alpha: 0.625401 freqs: [ 0.079066 0.055941 0.041977 0.053052 0.012937 0.040767 0.071586 0.057337 0.022355 0.062157 0.099081 0.0646 0.022951 0.042302 0.04404 0.061197 0.053287 0.012066 0.034155 0.069146] rates: [ 3.99181992e-01 2.59945005e-01 3.71057987e-01 2.33736396e+00 9.10775006e-01 9.75241005e-01 1.94010603e+00 3.36984009e-01 1.40697002e-01 3.71239990e-01 5.03814995e-01 1.05552006e+00 2.38236994e-01 1.10586798e+00 4.43904114e+00 2.00908995e+00 1.69701993e-01 2.05613002e-01 2.39256692e+00 7.06048012e-01 1.16397999e-01 5.01968026e-01 2.63675404e+00 3.41785014e-01 3.66407990e-01 2.27869010e+00 1.19250000e-01 2.83448994e-01 5.94046688e+00 4.54623014e-01 4.95080017e-02 3.12263995e-01 8.05842996e-01 5.43694973e-01 5.57424009e-01 2.95273989e-01 1.60471007e-01 4.76673698e+00 4.96537000e-01 1.59238899e+00 5.08692026e-01 1.35001504e+00 4.23438120e+00 1.79830000e-01 6.42559975e-02 2.01432705e+00 3.48390013e-01 8.40680003e-02 1.51924998e-01 3.76403189e+00 1.87872899e+00 4.26100008e-02 5.74720025e-01 7.85870031e-02 5.87430000e-02 4.91483003e-01 4.92423391e+00 7.93424010e-01 8.70603025e-01 1.00379996e-02 1.41570000e-02 2.65711010e-01 2.39909999e-02 1.63540002e-02 3.70411992e-01 1.16467500e+00 3.99901986e-01 2.80680005e-02 1.26872003e-01 3.56529988e-02 7.96390027e-02 3.28600011e-03 5.34565985e-01 6.01499021e-01 3.01082999e-01 5.57799995e-01 1.24570001e-02 8.39206994e-01 1.03788102e+00 7.07869977e-02 2.61475301e+00 1.07377994e+00 6.29280984e-01 1.09448802e+00 1.83986402e+00 3.87693596e+00 2.51626015e-01 4.52010202e+00 6.84129968e-02 5.46953976e-01 3.03714991e+00 1.57061899e+00 3.36689986e-02 5.86241007e-01 1.14923096e+00 1.01429701e+00 2.21801996e-01 2.41650000e-01 1.97511002e-01 3.27582985e-01 3.98043990e-01 4.15670015e-02 6.54259995e-02 1.69702196e+00 1.63145006e-01 1.76640004e-02 3.93844008e-01 5.74670970e-01 5.67695022e-01 7.31069967e-02 1.12719998e-01 2.30097994e-01 2.92497993e-01 8.17400031e-03 4.15630005e-02 2.78555006e-01 1.31033003e-01 8.41249973e-02 1.84955001e-01 1.63392997e+00 1.21922001e-01 2.52124995e-01 5.13460003e-02 7.20259994e-02 1.02245003e-01 3.43988001e-01 6.54762983e-01 4.15502012e-01 6.40559971e-01 4.77833986e-01 9.29666996e-01 5.48649013e-01 5.60661018e-01 4.98336077e+00 1.11759000e-01 3.89240789e+00 1.49372995e-01 4.01311302e+00 1.04490197e+00 7.35090002e-02 6.01980016e-02 9.70727980e-01 1.04854003e-01 2.18349993e-01 1.00000000e+01 1.29118994e-01 5.92759418e+00 2.43465710e+00 2.33879000e-01 1.71176001e-01 2.84471005e-01 5.81862986e-01 2.81383008e-01 1.59895599e+00 6.16581023e-01 2.24600006e-02 3.66530001e-01 7.03047991e-01 1.06756699e+00 4.68639992e-02 1.23889998e-01 1.73913002e-01 1.68920505e+00 9.37630013e-02 3.25810999e-01 1.89721596e+00 6.53739989e-01 4.51968014e-01 1.78298295e+00 8.87060016e-02 3.39765012e-01 1.54944003e-01 2.30734897e+00 7.32822180e+00 6.14777029e-01 1.25656700e+00 5.36634982e-01 8.93319994e-02 8.41509998e-02 2.78427988e-01 6.07776690e+00 2.33693004e-01 3.76132011e-01 9.23729986e-02 1.32240996e-01 2.30856001e-01 2.05478096e+00 2.95969892e+00 1.77958995e-01 2.34116003e-01]
+INFO     | 2018-01-15 15:56:45,834 | progress   |       Finished subset 1/1, 100.00 percent done
+DEBUG    | 2018-01-15 15:56:45,834 | subset     |       Finalising subset 340e1443c796a0abd2677e137439b7f5
+DEBUG    | 2018-01-15 15:56:45,835 | subset     |       models not done: set([])
+INFO     | 2018-01-15 15:56:45,835 | analysis_m |       Finding the best partitioning scheme
+DEBUG    | 2018-01-15 15:56:45,835 | scheme     |       Calculating number of parameters in scheme. Total parameters from subset models: 1
+DEBUG    | 2018-01-15 15:56:45,836 | scheme     |       Total parameters from brlens: 199
+DEBUG    | 2018-01-15 15:56:45,836 | scheme     |       Parameters from subset multipliers: 0
+DEBUG    | 2018-01-15 15:56:45,836 | scheme     |       Grand total parameters: 200
+DEBUG    | 2018-01-15 15:56:45,837 | scheme     |       n: 679 K: 200 lnL: -20055
+INFO     | 2018-01-15 15:56:45,837 | analysis_m |       Found no schemes that improve the score, stopping
+INFO     | 2018-01-15 15:56:45,837 | analysis_m |    Relaxed clustering algorithm finished after 3 steps
+INFO     | 2018-01-15 15:56:45,837 | analysis_m |    Best scoring scheme is scheme step_2, with aicc score of 40659.704
+INFO     | 2018-01-15 15:56:45,840 | model_util |    Information on best scheme is here: ./analysis/best_scheme.txt
+INFO     | 2018-01-15 15:56:45,845 | model_util |    
+INFO     | 2018-01-15 15:56:45,845 | model_util |    
+INFO     | 2018-01-15 15:56:45,846 | model_util |    *Citations for this analysis*
+INFO     | 2018-01-15 15:56:45,846 | model_util |    -----------------------------
+INFO     | 2018-01-15 15:56:45,846 | model_util |    
+INFO     | 2018-01-15 15:56:45,846 | model_util |    If you use this analysis in your published work, please cite the following papers on which your analysis relied.
+INFO     | 2018-01-15 15:56:45,847 | model_util |    
+INFO     | 2018-01-15 15:56:45,847 | model_util |    For the version of PartitionFinder you used, please cite:
+INFO     | 2018-01-15 15:56:45,847 | model_util |    Lanfear, R., Frandsen, P. B., Wright, A. M., Senfeld, T., Calcott, B. (2016) PartitionFinder 2: new methods for selecting partitioned models of evolution formolecular and morphological phylogenetic analyses. Molecular biology and evolution. DOI: dx.doi.org/10.1093/molbev/msw260
+INFO     | 2018-01-15 15:56:45,848 | model_util |    
+INFO     | 2018-01-15 15:56:45,848 | model_util |    For the rcluster algorithm you used, please cite:
+INFO     | 2018-01-15 15:56:45,848 | model_util |    Lanfear, R., Calcott, B., Kainer, D., Mayer, C., & Stamatakis, A. (2014). Selecting optimal partitioning schemes for phylogenomic datasets. BMC evolutionary biology, 14(1), 82.
+INFO     | 2018-01-15 15:56:45,848 | model_util |    
+INFO     | 2018-01-15 15:56:45,849 | model_util |    Your analysis also used RAxML, so please cite:
+INFO     | 2018-01-15 15:56:45,849 | model_util |    Stamatakis, A. (2014). RAxML version 8: a tool for phylogenetic analysis and post-analysis of large phylogenies. Bioinformatics, 30(9), 1312-1313.
+INFO     | 2018-01-15 15:56:45,849 | model_util |    
+DEBUG    | 2018-01-15 15:56:45,877 | config     | Returning to original path: /home-fn/users/nsfn1362_LHW/test/procManage
+DEBUG    | 2018-01-15 15:56:45,877 | config     | Cleaning out all subsets (There are 7)...
+INFO     | 2018-01-15 15:56:45,896 | main       | Total processing time: 0:02:16 (h:m:s)
+INFO     | 2018-01-15 15:56:45,896 | main       | Processing complete.

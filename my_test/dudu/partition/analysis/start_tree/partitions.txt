@@ -1,0 +1,4 @@
+LG, Subset1 = 1-187
+LG, Subset2 = 188-351
+LG, Subset3 = 352-515
+LG, Subset4 = 516-679

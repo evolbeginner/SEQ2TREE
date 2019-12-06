@@ -1,0 +1,11 @@
+Model selection results for subset: c1383c1be34ed837ea7e124f42a2869b
+Subset alignment stored here: ./analysis/phylofiles/c1383c1be34ed837ea7e124f42a2869b.phy
+This subset contains the following data_blocks: S5, S5-4, S5-3
+Number of columns in subset: 396
+Models are organised according to their AICc scores
+
+Model           | Parameters      | lnL             | AICc             | AIC             | BIC            
+LG+G            | 1               | -10502.4        | 21006.8          | 21006.8         | 21010.8        
+LG+I+G          | 2               | -10502.4        | 21008.9          | 21008.8         | 21016.8        
+WAG+G           | 1               | -10700.2        | 21402.3          | 21402.3         | 21406.3        
+WAG+I+G         | 2               | -10700.2        | 21404.4          | 21404.4         | 21412.3        

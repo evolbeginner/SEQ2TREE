@@ -1,0 +1,126 @@
+IQ-TREE multicore version 1.6.11 for Linux 64-bit built Jun  6 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cl001 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -redo -s test.aln -m LG+C10+G+F -pre C10/iqtree -ft C10/guide/iqtree.contree -nt 3 -bb 1000
+Seed:    475625 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Aug  2 21:19:57 2019
+Kernel:  AVX+FMA - 3 threads (40 CPU cores detected)
+
+Reading alignment file test.aln ... Fasta format detected
+Alignment most likely contains protein sequences
+WARNING: 15 sites contain only gaps or ambiguous characters.
+Alignment has 5 sequences with 204 columns, 61 distinct patterns
+15 parsimony-informative, 26 singleton sites, 163 constant sites
+          Gap/Ambiguity  Composition  p-value
+   1  Q98N40.2    8.33%    passed     99.67%
+   2  A6X0D5.1    8.82%    passed    100.00%
+   3  C3MAZ7.1    7.84%    passed    100.00%
+   4  Q92QF3.1    7.35%    passed    100.00%
+   5  Q8UE35.1    7.84%    passed    100.00%
+****  TOTAL       8.04%  0 sequences failed composition chi2 test (p-value<5%; df=19)
+
+===> COMPUTING SITE FREQUENCY MODEL BASED ON TREE FILE C10/guide/iqtree.contree
+Model LG+C10+G+F is alias for LG+POISSON+G+FMIX{C10pi1:1:0.1191344178,C10pi2:1:0.0874372456,C10pi3:1:0.1037105070,C10pi4:1:0.0922584809,C10pi5:1:0.1070492801,C10pi6:1:0.1329945166,C10pi7:1:0.0538028458,C10pi8:1:0.0691986212,C10pi9:1:0.1319937434,C10pi10:1:0.1024203429}+G+F
+NOTE: 3 MB RAM is required!
+1. Initial log-likelihood: -896.862
+2. Current log-likelihood: -843.553
+3. Current log-likelihood: -843.257
+Optimal log-likelihood: -843.251
+Mixture weights: 0.933 0.025 0.000 0.000 0.000 0.013 0.000 0.028 0.000 0.000 0.000
+Gamma shape alpha: 0.153
+Parameters optimization took 3 rounds (0.436 sec)
+Computing posterior mean site frequencies....
+Site state frequency vectors printed to C10/iqtree.sitefreq
+
+===> CONTINUE ANALYSIS USING THE INFERRED SITE FREQUENCY MODEL
+WARNING: States(s) C rarely appear in alignment and may cause numerical problems
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 475625)...
+Model LG+C10+G+F is alias for LG+POISSON+G+FMIX{C10pi1:1:0.1191344178,C10pi2:1:0.0874372456,C10pi3:1:0.1037105070,C10pi4:1:0.0922584809,C10pi5:1:0.1070492801,C10pi6:1:0.1329945166,C10pi7:1:0.0538028458,C10pi8:1:0.0691986212,C10pi9:1:0.1319937434,C10pi10:1:0.1024203429}+G+F
+
+NOTE: 1 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -834.653
+2. Current log-likelihood: -825.275
+3. Current log-likelihood: -824.391
+Optimal log-likelihood: -824.387
+Gamma shape alpha: 0.153
+Parameters optimization took 3 rounds (0.007 sec)
+Computing ML distances based on estimated model parameters... 0.002 sec
+Computing BIONJ tree...
+0.000 seconds
+Log-likelihood of BIONJ tree: -824.387
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.011 second
+Computing log-likelihood of 4 initial trees ... 0.005 seconds
+Current best score: -824.387
+
+Do NNI search on 5 best initial trees
+Finish initializing candidate tree set (5)
+Current best tree score: -824.387 / CPU time: 0.042
+Number of iterations: 5
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 10 / LogL: -824.676 / Time: 0h:0m:0s
+UPDATE BEST LOG-LIKELIHOOD: -824.387
+Iteration 20 / LogL: -824.617 / Time: 0h:0m:0s
+UPDATE BEST LOG-LIKELIHOOD: -824.387
+Iteration 30 / LogL: -824.617 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -824.438 / Time: 0h:0m:0s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -824.387
+Iteration 50 / LogL: -824.504 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -842.954
+UPDATE BEST LOG-LIKELIHOOD: -824.387
+Iteration 60 / LogL: -824.549 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -824.548 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -824.538 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 90 / LogL: -824.548 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -824.676 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -843.409
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -824.387
+Optimal log-likelihood: -824.387
+Gamma shape alpha: 0.153
+Parameters optimization took 1 rounds (0.001 sec)
+BEST SCORE FOUND : -824.387
+Creating bootstrap support values...
+Split supports printed to NEXUS file C10/iqtree.splits.nex
+Total tree length: 0.490
+
+Total number of iterations: 101
+CPU time used for tree search: 2.743 sec (0h:0m:2s)
+Wall-clock time used for tree search: 0.929 sec (0h:0m:0s)
+Total CPU time used: 2.890 sec (0h:0m:2s)
+Total wall-clock time used: 0.979 sec (0h:0m:0s)
+
+Computing bootstrap consensus tree...
+Reading input file C10/iqtree.splits.nex...
+5 taxa and 13 splits.
+Consensus tree written to C10/iqtree.contree
+Reading input trees file C10/iqtree.contree
+Log-likelihood of consensus tree: -824.387
+
+Analysis results written to: 
+  IQ-TREE report:                C10/iqtree.iqtree
+  Maximum-likelihood tree:       C10/iqtree.treefile
+  Likelihood distances:          C10/iqtree.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          C10/iqtree.splits.nex
+  Consensus tree:                C10/iqtree.contree
+  Screen log file:               C10/iqtree.log
+
+Date and Time: Fri Aug  2 21:19:58 2019

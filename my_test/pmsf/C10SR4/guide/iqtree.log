@@ -1,0 +1,116 @@
+IQ-TREE multicore version 1.6.11 for Linux 64-bit built Jun  6 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cl001 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -redo -s recoded.aln -m GTR+G+F -pre C10SR4/guide/iqtree -nt 3 -bb 1000
+Seed:    435867 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Aug  3 17:13:32 2019
+Kernel:  AVX+FMA - 3 threads (40 CPU cores detected)
+
+Reading alignment file recoded.aln ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 15 sites contain only gaps or ambiguous characters.
+Alignment has 5 sequences with 204 columns, 24 distinct patterns
+9 parsimony-informative, 15 singleton sites, 180 constant sites
+          Gap/Ambiguity  Composition  p-value
+   1  Q98N40.2    8.33%    passed     99.97%
+   2  A6X0D5.1    8.82%    passed     87.81%
+   3  C3MAZ7.1    7.84%    passed     96.24%
+   4  Q92QF3.1    7.35%    passed     99.96%
+   5  Q8UE35.1    7.84%    passed     98.90%
+****  TOTAL       8.04%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 435867)...
+
+NOTE: 0 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -376.867
+2. Current log-likelihood: -363.288
+Optimal log-likelihood: -363.186
+Rate parameters:  A-C: 100.00000  A-G: 51.52340  A-T: 18.12010  C-G: 19.16803  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.372  C: 0.048  G: 0.326  T: 0.254
+Gamma shape alpha: 0.354
+Parameters optimization took 2 rounds (0.062 sec)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+Computing ML distances based on estimated model parameters... 0.001 sec
+Computing BIONJ tree...
+0.000 seconds
+Log-likelihood of BIONJ tree: -363.186
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.015 second
+Computing log-likelihood of 4 initial trees ... 0.001 seconds
+Current best score: -363.186
+
+Do NNI search on 5 best initial trees
+Finish initializing candidate tree set (5)
+Current best tree score: -363.186 / CPU time: 0.033
+Number of iterations: 5
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -363.186
+Iteration 10 / LogL: -363.186 / Time: 0h:0m:0s
+Iteration 20 / LogL: -366.316 / Time: 0h:0m:0s
+Iteration 30 / LogL: -366.316 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -363.216 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -363.187 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -378.049
+Iteration 60 / LogL: -363.216 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -363.187 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -363.186 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 90 / LogL: -363.186 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -363.187 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -377.861
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -363.186
+Optimal log-likelihood: -363.186
+Rate parameters:  A-C: 100.00000  A-G: 51.01284  A-T: 17.95132  C-G: 19.23587  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.372  C: 0.048  G: 0.326  T: 0.254
+Gamma shape alpha: 0.345
+Parameters optimization took 1 rounds (0.002 sec)
+
+WARNING: Estimated model parameters are at boundary that can cause numerical instability!
+
+BEST SCORE FOUND : -363.186
+Creating bootstrap support values...
+Split supports printed to NEXUS file C10SR4/guide/iqtree.splits.nex
+Total tree length: 0.170
+
+Total number of iterations: 101
+CPU time used for tree search: 1.581 sec (0h:0m:1s)
+Wall-clock time used for tree search: 0.543 sec (0h:0m:0s)
+Total CPU time used: 1.720 sec (0h:0m:1s)
+Total wall-clock time used: 0.632 sec (0h:0m:0s)
+
+Computing bootstrap consensus tree...
+Reading input file C10SR4/guide/iqtree.splits.nex...
+5 taxa and 13 splits.
+Consensus tree written to C10SR4/guide/iqtree.contree
+Reading input trees file C10SR4/guide/iqtree.contree
+Log-likelihood of consensus tree: -363.186
+
+Analysis results written to: 
+  IQ-TREE report:                C10SR4/guide/iqtree.iqtree
+  Maximum-likelihood tree:       C10SR4/guide/iqtree.treefile
+  Likelihood distances:          C10SR4/guide/iqtree.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          C10SR4/guide/iqtree.splits.nex
+  Consensus tree:                C10SR4/guide/iqtree.contree
+  Screen log file:               C10SR4/guide/iqtree.log
+
+Date and Time: Sat Aug  3 17:13:33 2019

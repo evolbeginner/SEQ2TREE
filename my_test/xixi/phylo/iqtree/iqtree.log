@@ -1,0 +1,498 @@
+IQ-TREE multicore version 1.6.2 for Linux 64-bit built Mar  1 2018
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cl001 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s my_test/xixi/combined.aln -spp my_test/xixi/phylo/iqtree/iqtree.partition -m MFP+MERGE -mset JTT,WAG,LG -pre my_test/xixi/phylo/iqtree/iqtree -bb 1000 -nt AUTO -redo -quiet
+Seed:    80421 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu Apr 26 17:30:17 2018
+Kernel:  AVX+FMA - auto-detect threads (40 CPU cores detected)
+
+Reading partition model file my_test/xixi/phylo/iqtree/iqtree.partition ...
+Reading alignment file my_test/xixi/combined.aln ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 101 sequences with 565 columns, 300 distinct patterns
+283 parsimony-informative, 69 singleton sites, 213 constant sites
+                                Gap/Ambiguity  Composition  p-value
+   1  a11111111111111111111111111111   76.64%    passed     99.75%
+   2  A6X0D5.1                          1.06%    passed     60.26%
+   3  C3MAZ7.1                          0.00%    passed     37.86%
+   4  Q92QF3.1                          0.00%    passed     40.78%
+   5  Q8UE35.1                          0.00%    passed     33.08%
+   6  B9JVQ4.1                          1.06%    passed     37.86%
+   7  Q11HR9.1                          4.60%    passed     59.23%
+   8  Q2K9J9.1                          0.00%    passed     42.62%
+   9  Q1MIC4.1                          0.00%    passed     42.62%
+  10  A9IW04.1                          0.35%    passed     16.54%
+  11  Q6G2Y2.1                          0.35%    passed      9.60%
+  12  A1USR1.1                          0.00%    passed     47.54%
+  13  P66571.1                         18.41%    passed     54.86%
+  14  A5VQY9.1                         32.04%    passed     86.20%
+  15  Q6FZD9.1                         29.91%    passed     41.44%
+  16  B8ELE6.1                         29.91%    passed     28.70%
+  17  Q07KN5.1                         30.44%    passed     69.46%
+  18  A7HWS8.1                         29.91%    passed     43.16%
+  19  Q211G5.1                         30.44%    passed     69.46%
+  20  A4YSK9.2                         30.44%    passed     61.03%
+  21  A8IAP6.1                         30.44%    passed     58.17%
+  22  A7IPQ3.1                         32.04%    passed     80.09%
+  23  B1LWQ9.1                         32.04%    passed     58.66%
+  24  A9W4S3.1                         32.57%    passed     56.37%
+  25  B1Z776.1                         32.57%    passed     56.37%
+  26  Q3SSU9.1                         32.57%    passed     73.35%
+  27  B2IK79.1                         31.50%    passed     32.19%
+  28  B8ISA2.1                         32.57%    passed     37.27%
+  29  Q1QN13.1                         32.04%    passed     64.22%
+  30  Q89JA1.1                         32.04%    passed     69.73%
+  31  B6JEY2.1                         32.57%    passed     35.89%
+  32  Q6N4V0.3                         32.57%    passed     73.80%
+  33  Q2IXP3.1                         32.57%    passed     73.78%
+  34  B0UHV2.1                         32.57%    passed     46.87%
+  35  Q134U6.1                         32.57%    passed     73.78%
+  36  B4R8N4.1                         30.44%    passed     37.06%
+  37  Q0ANR7.1                         29.91%    passed     88.32%
+  38  B0T2D9.1                         29.91%    passed     51.46%
+  39  Q9A8T6.1                         29.91%    passed     51.44%
+  40  Q0BYD1.1                         30.44%    passed     68.51%
+  41  Q2N9C8.1                         30.97%    passed     98.46%
+  42  Q2W2K8.1                         30.44%    failed      0.00%
+  43  A8LM74.1                         33.10%    passed     94.84%
+  44  Q5NQ48.1                         30.97%    passed     77.01%
+  45  Q0BUN3.1                         32.04%    passed     57.07%
+  46  Q2RQX7.1                         32.04%    failed      0.00%
+  47  Q5LW41.1                         33.10%    passed     89.50%
+  48  Q1GK12.1                         32.57%    passed     81.42%
+  49  A5FZU8.1                         33.63%    passed     45.08%
+  50  Q5FU00.1                         32.57%    passed     46.42%
+  51  A1B044.1                         34.16%    passed     80.97%
+  52  A9H3L2.1                         32.57%    passed     23.84%
+  53  A4WVJ1.1                         34.16%    passed     66.80%
+  54  Q16AC7.1                         34.16%    passed     42.98%
+  55  Q3J5Q5.1                         34.16%    passed     66.80%
+  56  Q28UT7.1                         33.10%    passed     91.36%
+  57  Q4FLN5.1                         30.44%    failed      0.00%
+  58  A5V5Y5.1                         30.97%    passed     77.08%
+  59  Q1GPB6.1                         30.97%    passed     95.62%
+  60  Q2G8W3.1                         30.97%    passed     97.12%
+  61  B2JI48.1                         34.16%    passed     11.65%
+  62  Q62GM2.1                         34.16%    passed     11.65%
+  63  A9BRW8.1                         34.16%    passed     48.76%
+  64  Q2SU44.1                         34.16%    passed     11.65%
+  65  Q39KF0.1                         34.16%    passed     39.56%
+  66  Q0BJ29.1                         34.16%    passed     39.56%
+  67  B2T734.1                         34.16%    passed     19.59%
+  68  Q13TI7.1                         34.16%    passed     39.56%
+  69  A2SLE0.1                         35.22%    passed     13.35%
+  70  A9IHT0.1                         33.63%    failed      4.70%
+  71  C6C1A2.1                         33.10%    failed      1.04%
+  72  A1W325.1                         34.16%    passed     38.79%
+  73  B1Y8C0.1                         32.57%    passed     48.61%
+  74  A4SUX8.1                         34.16%    failed      2.83%
+  75  B7J484.1                         30.44%    failed      0.00%
+  76  Q8XV29.1                         34.16%    passed     10.03%
+  77  A0L5Z0.1                         32.04%    failed      0.06%
+  78  Q12G86.1                         35.22%    failed      2.47%
+  79  A1VJ32.1                         35.22%    failed      3.25%
+  80  Q46WG1.1                         33.63%    failed      1.04%
+  81  Q1LI54.1                         33.63%    failed      1.08%
+  82  Q2L266.1                         33.63%    failed      2.40%
+  83  Q0K636.1                         33.63%    failed      1.04%
+  84  A1TJT4.1                         34.16%    failed      0.00%
+  85  Q68W95.1                         31.50%    passed     13.89%
+  86  B2UEK2.1                         34.16%    failed      0.38%
+  87  C5CQ83.1                         32.04%    passed     19.14%
+  88  Q7WRA6.1                         33.63%    failed      3.75%
+  89  A4G9S1.1                         34.16%    failed      0.29%
+  90  A8F2D0.2                         32.04%    passed      5.90%
+  91  A8GPD3.1                         31.50%    passed     13.06%
+  92  A1WK99.1                         34.16%    passed     56.08%
+  93  A8GT52.1                         31.50%    failed      4.89%
+  94  Q92GY3.1                         31.50%    failed      3.72%
+  95  C3PP90.1                         31.50%    failed      3.72%
+  96  Q47J86.1                         32.04%    failed      0.26%
+  97  Q4UMR2.1                         31.50%    passed     13.06%
+  98  Q9ZCS2.1                         34.16%    passed     33.89%
+  99  Q39XY9.1                         35.22%    failed      0.00%
+ 100  C4K2G2.1                         31.50%    failed      4.89%
+ 101  Q98N40.2                         23.36%    failed      0.98%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL                            29.25%  25 sequences failed composition chi2 test (p-value<5%; df=19)
+
+Partition file is not in NEXUS format, assuming RAxML-style partition file...
+Subset	Type	Seqs	Sites	Infor	Invar	Model	Name
+1	AA	100	132	87	27	NR+MERGE	S5
+2	AA	100	132	87	27	NR+MERGE	S5-4
+3	AA	100	132	87	27	NR+MERGE	S5-3
+4	AA	13	169	22	132	NR+MERGE	S5-2
+Degree of missing data: 0.268
+Info: multi-threading strategy over partitions
+
+NOTE: Q1MIC4.1 is identical to Q2K9J9.1 but kept for subsequent analysis
+NOTE: Q211G5.1 is identical to Q07KN5.1 but kept for subsequent analysis
+NOTE: B1Z776.1 is identical to A9W4S3.1 but kept for subsequent analysis
+NOTE: Q134U6.1 is identical to Q2IXP3.1 but kept for subsequent analysis
+NOTE: Q3J5Q5.1 is identical to A4WVJ1.1 but kept for subsequent analysis
+NOTE: Q62GM2.1 is identical to B2JI48.1 but kept for subsequent analysis
+NOTE: Q0BJ29.1 is identical to Q39KF0.1 but kept for subsequent analysis
+NOTE: Q0K636.1 is identical to Q46WG1.1 but kept for subsequent analysis
+NOTE: Q4UMR2.1 is identical to A8GPD3.1 but kept for subsequent analysis
+NOTE: C3PP90.1 is identical to Q92GY3.1 but kept for subsequent analysis
+NOTE: 2 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Q2SU44.1 (identical to B2JI48.1) is ignored but added at the end
+NOTE: Q13TI7.1 (identical to Q39KF0.1) is ignored but added at the end
+Concatenated alignment was printed to my_test/xixi/phylo/iqtree/iqtree.uniqueseq.phy
+
+For your convenience alignment with unique sequences printed to my_test/xixi/phylo/iqtree/iqtree.uniqueseq.phy
+WARNING: States(s) W rarely appear in partition S5 and may cause numerical problems
+WARNING: States(s) W rarely appear in partition S5-4 and may cause numerical problems
+WARNING: States(s) W rarely appear in partition S5-3 and may cause numerical problems
+WARNING: States(s) C rarely appear in partition S5-2 and may cause numerical problems
+
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.031 seconds
+NOTE: ModelFinder requires 63 MB RAM!
+NUMBER OF THREADS FOR PARTITION FINDING: 13
+Testing LG+F+G on supermatrix...
+LG+F+G4 / LnL: -11552.223 / df: 215 / AIC: 23534.446 / AICc: 23800.578 / BIC: 24466.864
+Selecting individual models for 4 charsets using BIC...
+ No. Model        Score       Charset
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+   1 LG+G4        7100.940    S5-3
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+   2 LG+G4        7100.940    S5-4
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+   3 LG+G4        7100.344    S5
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+   4 LG+G4        1747.328    S5-2
+Full partition model BIC score: 24290.033 (LnL: -11504.997  df:202)
+Merging models to increase model fit (about 13 total partition schemes)...
+   5 LG+G4        24277.360   S5-4+S5-3
+   6 LG+G4        24290.238   S5-4+S5-2
+   7 LG+G4        24290.238   S5-3+S5-2
+   8 LG+G4        24290.195   S5+S5-2
+   9 LG+G4        24277.360   S5+S5-4
+  10 LG+G4        24277.360   S5+S5-3	0h:0m:37s (0h:0m:11s left)
+Merging S5-4+S5-3 with BIC score: 24277.360 (LnL: -11504.997  df: 200)
+  11 LG+G4        24278.192   S5-4+S5-3+S5-2	0h:1m:0s (0h:0m:10s left)
+  12 LG+G4        24264.686   S5+S5-4+S5-3	0h:1m:9s (0h:0m:5s left)
+Merging S5+S5-4+S5-3 with BIC score: 24264.686 (LnL: -11504.997  df: 198)
+  13 LG+G4        24265.732   S5+S5-4+S5-3+S5-2	0h:1m:54s (0h:0m:0s left)
+BEST-FIT PARTITION MODEL: 
+  charpartition BIC = LG+G4: S5 S5-4 S5-3, LG+G4: S5-2;
+Agglomerative model selection: ((S5,(S5-4,S5-3)1:24277.4)2:24264.7,S5-2)
+Merging into 2 partitions...
+Partition information was printed to my_test/xixi/phylo/iqtree/iqtree.best_scheme.nex
+Partition information in Raxml format was printed to my_test/xixi/phylo/iqtree/iqtree.best_scheme
+
+All model information printed to my_test/xixi/phylo/iqtree/iqtree.model.gz
+CPU time for ModelFinder: 424.517 seconds (0h:7m:4s)
+Wall-clock time for ModelFinder: 115.428 seconds (0h:1m:55s)
+Generating 1000 samples for ultrafast bootstrap (seed: 80421)...
+
+NOTE: 17 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 40 CPU cores
+Increase to 10 rounds for branch lengths
+96 trees examined
+Threads: 1 / Time: 40.328 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -24905
+Threads: 2 / Time: 40.092 sec / Speedup: 1.006 / Efficiency: 50% / LogL: -24905
+Threads: 3 / Time: 19.290 sec / Speedup: 2.091 / Efficiency: 70% / LogL: -24905
+Threads: 4 / Time: 16.304 sec / Speedup: 2.474 / Efficiency: 62% / LogL: -24905
+Threads: 5 / Time: 15.114 sec / Speedup: 2.668 / Efficiency: 53% / LogL: -24905
+Threads: 6 / Time: 13.982 sec / Speedup: 2.884 / Efficiency: 48% / LogL: -24905
+BEST NUMBER OF THREADS: 5
+
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11516.017
+Current log-likelihood at step 1: -11497.115
+Current log-likelihood at step 2: -11496.308
+Current log-likelihood at step 3: -11496.238
+Partition-specific rates:  0.833 1.392
+Parameters optimization took 2 rounds (0.254 sec)
+
+Computing ML distances based on estimated model parameters... 2.744 sec
+WARNING: Some pairwise ML distances are too long (saturated)
+Computing BIONJ tree...
+0.006 seconds
+Log-likelihood of BIONJ tree: -11569.324
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 2.246 second
+Computing log-likelihood of 98 initial trees ... 4.034 seconds
+Current best score: -11386.580
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11371.309
+Current log-likelihood at step 1: -11371.264
+Parameters optimization took 0 rounds (0.050 sec)
+
+BETTER TREE FOUND at iteration 1: -11371.264
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11367.852
+Current log-likelihood at step 1: -11367.847
+Parameters optimization took 0 rounds (0.051 sec)
+
+BETTER TREE FOUND at iteration 2: -11367.847
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11367.085
+Current log-likelihood at step 1: -11367.083
+Parameters optimization took 0 rounds (0.050 sec)
+
+BETTER TREE FOUND at iteration 8: -11367.083
+Iteration 10 / LogL: -11401.409 / Time: 0h:4m:33s
+Iteration 20 / LogL: -11374.397 / Time: 0h:4m:39s
+Finish initializing candidate tree set (20)
+Current best tree score: -11367.083 / CPU time: 17.483
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11366.276
+Current log-likelihood at step 1: -11366.236
+Parameters optimization took 0 rounds (0.049 sec)
+
+BETTER TREE FOUND at iteration 21: -11366.236
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11359.763
+Current log-likelihood at step 1: -11359.711
+Parameters optimization took 0 rounds (0.051 sec)
+
+BETTER TREE FOUND at iteration 22: -11359.711
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11356.284
+Current log-likelihood at step 1: -11356.226
+Parameters optimization took 0 rounds (0.067 sec)
+
+BETTER TREE FOUND at iteration 27: -11356.226
+Iteration 30 / LogL: -11358.434 / Time: 0h:4m:46s (0h:9m:31s left)
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11355.739
+Current log-likelihood at step 1: -11355.728
+Parameters optimization took 0 rounds (0.050 sec)
+
+BETTER TREE FOUND at iteration 34: -11355.728
+Estimate model parameters (epsilon = 0.100)
+Initial log-likelihood: -11355.473
+Current log-likelihood at step 1: -11355.466
+Parameters optimization took 0 rounds (0.051 sec)
+
+BETTER TREE FOUND at iteration 35: -11355.466
+Iteration 40 / LogL: -11421.646 / Time: 0h:4m:53s (0h:7m:14s left)
+Iteration 50 / LogL: -11403.812 / Time: 0h:5m:0s (0h:5m:20s left)
+Log-likelihood cutoff on original alignment: -11423.478
+UPDATE BEST LOG-LIKELIHOOD: -11355.466
+Iteration 60 / LogL: -11381.666 / Time: 0h:5m:6s (0h:4m:3s left)
+Iteration 70 / LogL: -11355.736 / Time: 0h:5m:14s (0h:3m:7s left)
+Iteration 80 / LogL: -11388.825 / Time: 0h:5m:21s (0h:2m:23s left)
+Iteration 90 / LogL: -11358.030 / Time: 0h:5m:28s (0h:1m:47s left)
+Iteration 100 / LogL: -11357.113 / Time: 0h:5m:35s (0h:1m:17s left)
+Log-likelihood cutoff on original alignment: -11423.478
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+Iteration 110 / LogL: -11378.053 / Time: 0h:5m:42s (0h:3m:7s left)
+UPDATE BEST LOG-LIKELIHOOD: -11355.465
+UPDATE BEST LOG-LIKELIHOOD: -11355.465
+Iteration 120 / LogL: -11372.965 / Time: 0h:5m:49s (0h:2m:37s left)
+Iteration 130 / LogL: -11674.271 / Time: 0h:5m:56s (0h:2m:10s left)
+TREE SEARCH COMPLETED AFTER 136 ITERATIONS / Time: 0h:6m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+Initial log-likelihood: -11355.465
+Current log-likelihood at step 1: -11355.465
+Partition-specific rates:  0.836 1.383
+Parameters optimization took 0 rounds (0.048 sec)
+
+BEST SCORE FOUND : -11355.465
+Creating bootstrap support values...
+Split supports printed to NEXUS file my_test/xixi/phylo/iqtree/iqtree.splits.nex
+Total tree length: 8.333
+
+Total number of iterations: 136
+CPU time used for tree search: 486.140 sec (0h:8m:6s)
+Wall-clock time used for tree search: 99.186 sec (0h:1m:39s)
+Total CPU time used: 1319.715 sec (0h:21m:59s)
+Total wall-clock time used: 361.069 sec (0h:6m:1s)
+
+Computing bootstrap consensus tree...
+Reading input file my_test/xixi/phylo/iqtree/iqtree.splits.nex...
+99 taxa and 537 splits.
+Consensus tree written to my_test/xixi/phylo/iqtree/iqtree.contree
+Reading input trees file my_test/xixi/phylo/iqtree/iqtree.contree
+Log-likelihood of consensus tree: -11355.466
+
+Analysis results written to: 
+  IQ-TREE report:                my_test/xixi/phylo/iqtree/iqtree.iqtree
+  Maximum-likelihood tree:       my_test/xixi/phylo/iqtree/iqtree.treefile
+  Likelihood distances:          my_test/xixi/phylo/iqtree/iqtree.mldist
+  Best partitioning scheme:      my_test/xixi/phylo/iqtree/iqtree.best_scheme.nex
+           in RAxML format:      my_test/xixi/phylo/iqtree/iqtree.best_scheme
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          my_test/xixi/phylo/iqtree/iqtree.splits.nex
+  Consensus tree:                my_test/xixi/phylo/iqtree/iqtree.contree
+  Screen log file:               my_test/xixi/phylo/iqtree/iqtree.log
+
+Date and Time: Thu Apr 26 17:36:18 2018

@@ -1,0 +1,8 @@
+#!/bin/bash
+APP_NAME=AMD_small
+NP=10
+NP_PER_NODE=10
+RUN=RAW
+
+source ~/.bashrc
+mpirun --mca btl self,sm,openib /home-fn/users/nscc1082/software/standard-RAxML-huyg/raxmlHPC-MPI-SSE3 -k -f a -m PROTGAMMAJTT -n raxml -s ../combined.aln -q raxml.scheme -T 2 -w /home-fn/users/nsfn1362_LHW/LHW-tools/SEQ2TREE/my_test/dudu-2/raxml/tree -# 100 -p 123 -x 123

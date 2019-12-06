@@ -1,0 +1,6 @@
+#nexus
+begin sets;
+  charset S5_S5-4_S5-3_S5-2 = 1-132;  133-264;  265-396;  397-565;;
+  charpartition mymodels =
+    LG+G4: S5_S5-4_S5-3_S5-2;
+end;

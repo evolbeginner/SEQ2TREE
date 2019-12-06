@@ -1,0 +1,119 @@
+IQ-TREE 1.6.11 built Jun  6 2019
+
+Input file name: test.aln
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 475625
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Lam-Tung Nguyen, Heiko A. Schmidt, Arndt von Haeseler, and Bui Quang Minh
+(2015) IQ-TREE: A fast and effective stochastic algorithm for estimating
+maximum likelihood phylogenies. Mol Biol Evol, 32:268-274.
+https://doi.org/10.1093/molbev/msu300
+
+Since you used site-specific frequency model please also cite: 
+
+Huai-Chun Wang, Edward Susko, Bui Quang Minh, and Andrew J. Roger (2017)
+Modeling site heterogeneity with posterior mean site frequency profiles
+accelerates accurate phylogenomic estimation. Syst Biol, in press.
+https://doi.org/10.1093/sysbio/syx068
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2017) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol Biol Evol, in press.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 5 sequences with 204 amino-acid sites
+Number of constant sites: 163 (= 79.902% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 163 (= 79.902% of all sites)
+Number of parsimony informative sites: 15
+Number of distinct site patterns: 61
+
+SUBSTITUTION PROCESS
+--------------------
+
+Model of substitution: LG+SSF+F+G4
+
+State frequencies: (site specific frequencies)
+
+Model of rate heterogeneity: Gamma with 4 categories
+Gamma shape alpha: 0.1530
+
+ Category  Relative_rate  Proportion
+  1         0.0001         0.2500
+  2         0.0118         0.2500
+  3         0.2507         0.2500
+  4         3.7375         0.2500
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -824.3872 (s.e. 46.5456)
+Unconstrained log-likelihood (without tree): -702.3927
+Number of free parameters (#branches + #model parameters): 27
+Akaike information criterion (AIC) score: 1702.7744
+Corrected Akaike information criterion (AICc) score: 1711.3653
+Bayesian information criterion (BIC) score: 1792.3636
+
+Total tree length (sum of branch lengths): 0.4898
+Sum of internal branch lengths: 0.2211 (45.1363% of tree length)
+
+NOTE: Tree is UNROOTED although outgroup taxon 'Q98N40.2' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++-----------------------------------Q98N40.2
+|
++--------------A6X0D5.1
+|
+|                                                    +**C3MAZ7.1
+|                                             +------| (77)
+|                                             |      +-----Q92QF3.1
++---------------------------------------------| (100)
+                                              +------Q8UE35.1
+
+Tree in newick format:
+
+(Q98N40.2:0.1494722692,A6X0D5.1:0.0635836197,((C3MAZ7.1:0.0000021996,Q92QF3.1:0.0266288279)77:0.0289087159,Q8UE35.1:0.0290453793)100:0.1921771488);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000bootstrap trees
+Log-likelihood of consensus tree: -824.387203
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++-----------------------------------Q98N40.2
+|
++--------------A6X0D5.1
+|
+|                                                    +--C3MAZ7.1
+|                                             +------| (77)
+|                                             |      +-----Q92QF3.1
++---------------------------------------------| (100)
+                                              +------Q8UE35.1
+
+
+Consensus tree in newick format: 
+
+(Q98N40.2:0.1494649438,A6X0D5.1:0.0635742391,((C3MAZ7.1:0.0000021996,Q92QF3.1:0.0266089629)77:0.0290469796,Q8UE35.1:0.0289322572)100:0.1920969595);
+
+TIME STAMP
+----------
+
+Date and time: Fri Aug  2 21:19:58 2019
+Total CPU time used: 2.889585 seconds (0h:0m:2s)
+Total wall-clock time used: 0.9860818386 seconds (0h:0m:0s)
+
