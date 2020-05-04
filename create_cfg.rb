@@ -30,7 +30,7 @@ infiles = Array.new
 indir = nil
 suffix = nil
 num = 1
-cfg_outfile = 'partition_finder.cfg'
+cfg_outfile = nil
 aln_outfile = nil
 model_selections = %W[aicc]
 search = 'rcluster'
@@ -108,11 +108,9 @@ end
 i_argu = infiles.map{|i|['-i', i].join(' ')}.join(' ')
 system("ruby #{@CATALN} #{i_argu} -n #{num} > #{aln_outfile}")
 
-
 if isMFAtoPHY
   aln_outfile = convertMFAtoPHY(aln_outfile) # from fasta to phy
 end
-
 
 if ! cfg_outfile.nil?
   out_fh = File.open(cfg_outfile, 'w')

@@ -100,7 +100,8 @@ results = Parallel.map(infiles, in_processes: cpu) do |infile|
   elsif is_nogaps
     system("#{$TRIMAL} -in #{infile} -out #{outfile} -nogaps")
   else
-    system("#{$TRIMAL} -in #{infile} -out #{outfile} -st 0.001")
+    system("#{$TRIMAL} -in #{infile} -out #{outfile} -st 0.001 -resoverlap 0.75 -seqoverlap 80 >/dev/null")
+    #system("#{$TRIMAL} -in #{infile} -out #{outfile} -st 0.001")
   end
 end
 

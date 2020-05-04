@@ -302,7 +302,7 @@ while [ $# -gt 0 ]; do
 		--model3-LG|--model-LG3)
 			tree_add_cmd=$tree_add_cmd' '"-mset LG -mrate E,I,G,I+G"
 			;;
-		--pmsf_model)
+		--pmsf_model|--PMSF_model)
 			pmsf_model=$2
 			shift
 			;;
@@ -427,7 +427,7 @@ if [ $is_iqtree == true ]; then
 	$ruby $create_cfg --indir $good_aln_indir --suffix aln --aln $combined_aln --mfa2phy --cfg $cfg_outfile -n $num
 	sed '/\[data_blocks\]/,/#/!d' $cfg_outfile | sed '1d'| sed '$d' |awk '{print "NR, ",$0}' > $iqtree_outdir/iqtree.partition
 	[ $is_add_gaps == true ] && ruby $splitAln -p $cfg_outfile --aln $combined_aln --outdir $gap_aln_outdir --force
-	[ $is_stop_partition == true ] && exit 0 # is --sp, exit
+	[ $is_stop_partition == true ] && exit 0 # i.e. --sp, exit
 
 	if [ $bb == 0 ]; then
 		bb_str=""
@@ -458,7 +458,7 @@ if [ $is_fasttree == true ]; then
 	echo "Constructing phylogenetic tree using FastTree"
 	$ruby $create_cfg --indir $good_aln_indir --suffix aln --aln $combined_aln --mfa2phy --cfg $cfg_outfile -n $num
 	mkdir -p $fasttree_outdir
-	FastTree -quiet < $combined_aln > $fasttree_outdir/fasttree.tre
+	FastTree -quiet -gamma < $combined_aln > $fasttree_outdir/fasttree.tre
 fi
 
 
