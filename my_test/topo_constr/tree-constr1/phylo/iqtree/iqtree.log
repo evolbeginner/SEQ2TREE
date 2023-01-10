@@ -1,0 +1,128 @@
+IQ-TREE multicore version 2.1.1 COVID-edition for Linux 64-bit built Aug 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cl001 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -s tree-constr1/combined.aln -m LG+G+I+F -pre tree-constr1/phylo/iqtree/iqtree -bb 1000 -nt 6 -redo -wbtl -quiet -g constr1
+Seed:    642060 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu May 20 11:45:55 2021
+Kernel:  AVX+FMA - 6 threads (40 CPU cores detected)
+
+Reading alignment file tree-constr1/combined.aln ... Fasta format detected
+Alignment most likely contains protein sequences
+Alignment has 10 sequences with 687 columns, 114 distinct patterns
+55 parsimony-informative, 78 singleton sites, 554 constant sites
+          Gap/Ambiguity  Composition  p-value
+   1  A6X0D5.1    1.16%    passed    100.00%
+   2  C3MAZ7.1    0.00%    passed    100.00%
+   3  Q92QF3.1    0.00%    passed    100.00%
+   4  Q8UE35.1    0.00%    passed     99.97%
+   5  B9JVQ4.1    1.75%    passed     99.98%
+   6  Q11HR9.1    9.17%    passed     97.21%
+   7  Q2K9J9.1    0.00%    passed    100.00%
+   8  Q1MIC4.1    0.00%    passed    100.00%
+   9  A9IW04.1    2.18%    passed     96.24%
+  10  Q98N40.2   25.76%    failed      0.23%
+****  TOTAL       4.00%  1 sequences failed composition chi2 test (p-value<5%; df=19)
+Reading constraint tree constr1...
+INFO: Constraint tree will be applied to ML tree and all bootstrap trees.
+WARNING: States(s) C rarely appear in alignment and may cause numerical problems
+Creating fast initial parsimony tree by random order stepwise addition...
+0.001 seconds, parsimony score: 213 (based on 133 sites)
+Generating 1000 samples for ultrafast bootstrap (seed: 642060)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+Thoroughly optimizing +I+G parameters from 10 start values...
+Init pinv, alpha: 0.000, 1.000 / Estimate: 0.000, 0.156 / LogL: -3100.002
+Init pinv, alpha: 0.090, 1.000 / Estimate: 0.089, 0.197 / LogL: -3100.231
+Init pinv, alpha: 0.179, 1.000 / Estimate: 0.178, 0.251 / LogL: -3100.523
+Init pinv, alpha: 0.269, 1.000 / Estimate: 0.267, 0.325 / LogL: -3100.847
+Init pinv, alpha: 0.358, 1.000 / Estimate: 0.357, 0.438 / LogL: -3101.156
+Init pinv, alpha: 0.448, 1.000 / Estimate: 0.448, 0.634 / LogL: -3101.363
+Init pinv, alpha: 0.538, 1.000 / Estimate: 0.538, 1.051 / LogL: -3101.327
+Init pinv, alpha: 0.627, 1.000 / Estimate: 0.630, 2.794 / LogL: -3100.725
+Init pinv, alpha: 0.717, 1.000 / Estimate: 0.697, 998.400 / LogL: -3099.830
+Init pinv, alpha: 0.806, 1.000 / Estimate: 0.698, 998.440 / LogL: -3099.673
+Optimal pinv,alpha: 0.698, 998.440 / LogL: -3099.673
+
+Parameters optimization took 0.154 sec
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.021 second
+Computing log-likelihood of 87 initial trees ... 0.107 seconds
+Current best score: -3099.669
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -3099.621
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -3097.648
+Iteration 10 / LogL: -3098.251 / Time: 0h:0m:0s
+Iteration 20 / LogL: -3125.362 / Time: 0h:0m:0s
+Finish initializing candidate tree set (5)
+Current best tree score: -3097.648 / CPU time: 0.365
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -3097.648
+Iteration 30 / LogL: -3125.375 / Time: 0h:0m:0s (0h:0m:1s left)
+Iteration 40 / LogL: -3097.659 / Time: 0h:0m:0s (0h:0m:1s left)
+UPDATE BEST LOG-LIKELIHOOD: -3097.648
+Iteration 50 / LogL: -3097.655 / Time: 0h:0m:1s (0h:0m:1s left)
+Log-likelihood cutoff on original alignment: -3128.790
+UFBoot trees printed to tree-constr1/phylo/iqtree/iqtree.ufboot
+Iteration 60 / LogL: -3097.697 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 70 / LogL: -3097.999 / Time: 0h:0m:1s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -3097.648
+Iteration 80 / LogL: -3098.134 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 90 / LogL: -3097.688 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 100 / LogL: -3099.551 / Time: 0h:0m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -3128.790
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+UFBoot trees printed to tree-constr1/phylo/iqtree/iqtree.ufboot
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:0m:2s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -3097.648
+Optimal log-likelihood: -3097.647
+Proportion of invariable sites: 0.699
+Gamma shape alpha: 998.440
+Parameters optimization took 1 rounds (0.003 sec)
+BEST SCORE FOUND : -3097.647
+Creating bootstrap support values...
+Split supports printed to NEXUS file tree-constr1/phylo/iqtree/iqtree.splits.nex
+Total tree length: 0.365
+
+Total number of iterations: 103
+CPU time used for tree search: 10.919 sec (0h:0m:10s)
+Wall-clock time used for tree search: 1.846 sec (0h:0m:1s)
+Total CPU time used: 12.207 sec (0h:0m:12s)
+Total wall-clock time used: 2.063 sec (0h:0m:2s)
+UFBoot trees printed to tree-constr1/phylo/iqtree/iqtree.ufboot
+
+Computing bootstrap consensus tree...
+Reading input file tree-constr1/phylo/iqtree/iqtree.splits.nex...
+10 taxa and 30 splits.
+Consensus tree written to tree-constr1/phylo/iqtree/iqtree.contree
+Reading input trees file tree-constr1/phylo/iqtree/iqtree.contree
+Log-likelihood of consensus tree: -3099.678
+
+Analysis results written to: 
+  IQ-TREE report:                tree-constr1/phylo/iqtree/iqtree.iqtree
+  Maximum-likelihood tree:       tree-constr1/phylo/iqtree/iqtree.treefile
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          tree-constr1/phylo/iqtree/iqtree.splits.nex
+  Consensus tree:                tree-constr1/phylo/iqtree/iqtree.contree
+  UFBoot trees:                  tree-constr1/phylo/iqtree/iqtree.ufboot
+  Screen log file:               tree-constr1/phylo/iqtree/iqtree.log
+
+Date and Time: Thu May 20 11:45:57 2021

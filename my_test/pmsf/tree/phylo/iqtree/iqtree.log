@@ -1,0 +1,264 @@
+IQ-TREE multicore version 1.6.11 for Linux 64-bit built Jun  6 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cl001 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -redo -s tree/recoded.aln -m C20SR4 -pre tree/phylo/iqtree/iqtree -ft tree/phylo/iqtree/guide/iqtree.contree -nt 2 -bb 1000 -mdef /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C20SR4.nex
+Seed:    529406 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Aug  3 17:44:59 2019
+Kernel:  AVX+FMA - 2 threads (40 CPU cores detected)
+
+Reading alignment file tree/recoded.aln ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 5 sequences with 174 columns, 12 distinct patterns
+1 parsimony-informative, 9 singleton sites, 164 constant sites
+          Gap/Ambiguity  Composition  p-value
+   1  Q98N40.2    0.57%    passed     98.01%
+   2  A6X0D5.1    0.57%    passed     97.68%
+   3  C3MAZ7.1    0.00%    passed     99.98%
+   4  Q92QF3.1    0.00%    passed     99.98%
+   5  Q8UE35.1    0.00%    passed     99.98%
+****  TOTAL       0.23%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+===> COMPUTING SITE FREQUENCY MODEL BASED ON TREE FILE tree/phylo/iqtree/guide/iqtree.contree
+Reading model definition file /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C20SR4.nex ... 70 models and 234 frequency vectors loaded
+Model C20SR4 is alias for GTR+G+FMIX{C20SR41,C20SR42,C20SR43,C20SR44,C20SR45,C20SR46,C20SR47,C20SR48,C20SR49,C20SR410,C20SR411,C20SR412,C20SR413,C20SR414,C20SR415,C20SR416,C20SR417,C20SR418,C20SR419,C20SR420}+F
+WARNING: 2 threads for alignment length 12 will slow down analysis
+NOTE: 0 MB RAM is required!
+1. Initial log-likelihood: -269.576
+2. Current log-likelihood: -259.448
+3. Current log-likelihood: -259.269
+Optimal log-likelihood: -259.176
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 34.22007  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.351  C: 0.039  G: 0.343  T: 0.266
+Rate parameters:  A-C: 0.00010  A-G: 49.44082  A-T: 0.00515  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.810  C: 0.030  G: 0.108  T: 0.052
+Rate parameters:  A-C: 0.00010  A-G: 65.64645  A-T: 2.97406  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.409  C: 0.044  G: 0.026  T: 0.521
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 14.15671  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.045  C: 0.011  G: 0.006  T: 0.938
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 0.15071  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.175  C: 0.049  G: 0.714  T: 0.062
+Rate parameters:  A-C: 0.00010  A-G: 3.01471  A-T: 0.00423  C-G: 43.06516  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.034  C: 0.539  G: 0.017  T: 0.410
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 55.56870  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.421  C: 0.020  G: 0.502  T: 0.057
+Rate parameters:  A-C: 0.00010  A-G: 0.66169  A-T: 100.00000  C-G: 40.90059  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.847  C: 0.024  G: 0.110  T: 0.020
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.307  C: 0.195  G: 0.102  T: 0.396
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 10.56052  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.186  C: 0.068  G: 0.361  T: 0.385
+Rate parameters:  A-C: 0.00010  A-G: 8.90327  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.034  C: 0.110  G: 0.014  T: 0.842
+Rate parameters:  A-C: 0.00010  A-G: 92.05530  A-T: 0.00010  C-G: 62.90446  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.536  C: 0.038  G: 0.391  T: 0.034
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 99.99998  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.046  C: 0.016  G: 0.017  T: 0.921
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 39.35432  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.208  C: 0.039  G: 0.212  T: 0.542
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.00010  C-G: 11.99449  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.850  C: 0.048  G: 0.026  T: 0.075
+Rate parameters:  A-C: 0.00010  A-G: 0.00409  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.261  C: 0.344  G: 0.278  T: 0.117
+Rate parameters:  A-C: 0.00010  A-G: 61.36005  A-T: 0.00010  C-G: 51.75019  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.516  C: 0.048  G: 0.418  T: 0.018
+Rate parameters:  A-C: 0.00010  A-G: 84.06453  A-T: 0.02568  C-G: 88.25383  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.687  C: 0.024  G: 0.214  T: 0.075
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 58.63623  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.413  C: 0.041  G: 0.374  T: 0.172
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 3.42525  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.258  C: 0.035  G: 0.657  T: 0.051
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 7.34928  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.213  C: 0.020  G: 0.745  T: 0.023
+Mixture weights: 0.067 0.004 0.000 0.000 0.050 0.000 0.061 0.188 0.000 0.045 0.100 0.010 0.000 0.229 0.002 0.000 0.005 0.009 0.027 0.045 0.158
+Gamma shape alpha: 0.842
+Parameters optimization took 3 rounds (8.240 sec)
+Computing posterior mean site frequencies....
+Site state frequency vectors printed to tree/phylo/iqtree/iqtree.sitefreq
+
+===> CONTINUE ANALYSIS USING THE INFERRED SITE FREQUENCY MODEL
+NOTE: Q92QF3.1 is identical to C3MAZ7.1 but kept for subsequent analysis
+NOTE: 1 identical sequences (see below) will be ignored for subsequent analysis
+NOTE: Q8UE35.1 (identical to C3MAZ7.1) is ignored but added at the end
+
+For your convenience alignment with unique sequences printed to tree/phylo/iqtree/iqtree.uniqueseq.phy
+Reading model definition file /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C20SR4.nex ... 70 models and 234 frequency vectors loaded
+Reading model definition file /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C20SR4.nex ... 70 models and 234 frequency vectors loaded
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+WARNING: 2 threads for alignment length 12 will slow down analysis
+Generating 1000 samples for ultrafast bootstrap (seed: 529406)...
+Model C20SR4 is alias for GTR+G+FMIX{C20SR41,C20SR42,C20SR43,C20SR44,C20SR45,C20SR46,C20SR47,C20SR48,C20SR49,C20SR410,C20SR411,C20SR412,C20SR413,C20SR414,C20SR415,C20SR416,C20SR417,C20SR418,C20SR419,C20SR420}+F
+
+NOTE: 0 MB RAM (0 GB) is required!
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -271.544
+2. Current log-likelihood: -259.420
+3. Current log-likelihood: -259.256
+Optimal log-likelihood: -259.150
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 22.97789  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.352  C: 0.039  G: 0.343  T: 0.267
+Rate parameters:  A-C: 0.00010  A-G: 48.29041  A-T: 0.00710  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.810  C: 0.030  G: 0.108  T: 0.052
+Rate parameters:  A-C: 0.00010  A-G: 64.09772  A-T: 4.53336  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.409  C: 0.044  G: 0.026  T: 0.521
+Rate parameters:  A-C: 91.00247  A-G: 100.00000  A-T: 100.00000  C-G: 100.00000  C-T: 99.97919  G-T: 1.00000
+Base frequencies:  A: 0.045  C: 0.011  G: 0.006  T: 0.938
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 0.01534  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.175  C: 0.049  G: 0.714  T: 0.062
+Rate parameters:  A-C: 0.00010  A-G: 2.99520  A-T: 0.01266  C-G: 42.93033  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.034  C: 0.539  G: 0.017  T: 0.410
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 41.44258  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.421  C: 0.020  G: 0.502  T: 0.057
+Rate parameters:  A-C: 0.00010  A-G: 0.89825  A-T: 100.00000  C-G: 38.99684  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.847  C: 0.024  G: 0.110  T: 0.020
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.307  C: 0.195  G: 0.102  T: 0.396
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 5.67269  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.186  C: 0.068  G: 0.361  T: 0.385
+Rate parameters:  A-C: 0.00010  A-G: 8.77785  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.034  C: 0.110  G: 0.014  T: 0.842
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00117  C-G: 57.86316  C-T: 0.00023  G-T: 1.00000
+Base frequencies:  A: 0.536  C: 0.038  G: 0.391  T: 0.034
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 63.95169  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.046  C: 0.016  G: 0.017  T: 0.921
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 30.71075  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.208  C: 0.039  G: 0.212  T: 0.542
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.850  C: 0.048  G: 0.026  T: 0.075
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.261  C: 0.344  G: 0.278  T: 0.117
+Rate parameters:  A-C: 0.00010  A-G: 67.84257  A-T: 0.00010  C-G: 45.68275  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.516  C: 0.048  G: 0.418  T: 0.018
+Rate parameters:  A-C: 0.00010  A-G: 89.61626  A-T: 0.00248  C-G: 95.08705  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.687  C: 0.024  G: 0.214  T: 0.075
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 39.81021  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.413  C: 0.041  G: 0.374  T: 0.172
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 1.27855  C-T: 0.00130  G-T: 1.00000
+Base frequencies:  A: 0.258  C: 0.035  G: 0.657  T: 0.051
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 5.78710  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.213  C: 0.020  G: 0.745  T: 0.023
+Mixture weights: 0.062 0.002 0.000 0.000 0.051 0.000 0.057 0.184 0.000 0.044 0.104 0.008 0.000 0.225 0.015 0.000 0.004 0.007 0.024 0.045 0.168
+Gamma shape alpha: 0.849
+Parameters optimization took 3 rounds (7.341 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+Computing ML distances based on estimated model parameters... 0.000 sec
+Computing BIONJ tree...
+0.000 seconds
+Log-likelihood of BIONJ tree: -259.148
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.006 second
+Computing log-likelihood of 2 initial trees ... 0.001 seconds
+Current best score: -259.148
+
+Do NNI search on 3 best initial trees
+Finish initializing candidate tree set (3)
+Current best tree score: -259.148 / CPU time: 0.019
+Number of iterations: 3
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Iteration 10 / LogL: -259.149 / Time: 0h:0m:7s
+UPDATE BEST LOG-LIKELIHOOD: -259.148
+UPDATE BEST LOG-LIKELIHOOD: -259.148
+Iteration 20 / LogL: -259.148 / Time: 0h:0m:7s
+Iteration 30 / LogL: -259.149 / Time: 0h:0m:7s (0h:0m:18s left)
+Iteration 40 / LogL: -259.322 / Time: 0h:0m:7s (0h:0m:11s left)
+Iteration 50 / LogL: -259.149 / Time: 0h:0m:7s (0h:0m:7s left)
+Log-likelihood cutoff on original alignment: -260.262
+Iteration 60 / LogL: -259.148 / Time: 0h:0m:7s (0h:0m:5s left)
+Iteration 70 / LogL: -259.149 / Time: 0h:0m:7s (0h:0m:3s left)
+Iteration 80 / LogL: -259.322 / Time: 0h:0m:7s (0h:0m:1s left)
+Iteration 90 / LogL: -259.149 / Time: 0h:0m:7s (0h:0m:0s left)
+Iteration 100 / LogL: -259.149 / Time: 0h:0m:7s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -260.262
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:7s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -259.148
+2. Current log-likelihood: -259.130
+3. Current log-likelihood: -259.120
+Optimal log-likelihood: -259.113
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.02112  C-G: 29.08744  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.352  C: 0.039  G: 0.343  T: 0.267
+Rate parameters:  A-C: 0.00010  A-G: 45.62672  A-T: 0.03680  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.810  C: 0.030  G: 0.108  T: 0.052
+Rate parameters:  A-C: 0.00010  A-G: 64.09772  A-T: 4.53336  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.409  C: 0.044  G: 0.026  T: 0.521
+Rate parameters:  A-C: 91.00247  A-G: 100.00000  A-T: 100.00000  C-G: 100.00000  C-T: 99.97919  G-T: 1.00000
+Base frequencies:  A: 0.045  C: 0.011  G: 0.006  T: 0.938
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00381  C-G: 0.01753  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.175  C: 0.049  G: 0.714  T: 0.062
+Rate parameters:  A-C: 0.00010  A-G: 2.99520  A-T: 0.01266  C-G: 42.93033  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.034  C: 0.539  G: 0.017  T: 0.410
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00690  C-G: 38.29668  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.421  C: 0.020  G: 0.502  T: 0.057
+Rate parameters:  A-C: 0.00010  A-G: 1.33588  A-T: 99.99857  C-G: 38.95374  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.847  C: 0.024  G: 0.110  T: 0.020
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.307  C: 0.195  G: 0.102  T: 0.396
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.01394  C-G: 10.11251  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.186  C: 0.068  G: 0.361  T: 0.385
+Rate parameters:  A-C: 0.00010  A-G: 8.77717  A-T: 0.00114  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.034  C: 0.110  G: 0.014  T: 0.842
+Rate parameters:  A-C: 0.00010  A-G: 98.82572  A-T: 0.00010  C-G: 60.47371  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.536  C: 0.038  G: 0.391  T: 0.034
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 63.95169  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.046  C: 0.016  G: 0.017  T: 0.921
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.02656  C-G: 33.44366  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.208  C: 0.039  G: 0.212  T: 0.542
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.850  C: 0.048  G: 0.026  T: 0.075
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.00010  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.261  C: 0.344  G: 0.278  T: 0.117
+Rate parameters:  A-C: 0.00010  A-G: 66.82463  A-T: 0.00796  C-G: 47.48346  C-T: 0.00504  G-T: 1.00000
+Base frequencies:  A: 0.516  C: 0.048  G: 0.418  T: 0.018
+Rate parameters:  A-C: 0.00010  A-G: 89.61609  A-T: 0.01819  C-G: 95.08737  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.687  C: 0.024  G: 0.214  T: 0.075
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.01949  C-G: 40.76114  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.413  C: 0.041  G: 0.374  T: 0.172
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.01212  C-G: 2.08790  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.258  C: 0.035  G: 0.657  T: 0.051
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00031  C-G: 5.78653  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.213  C: 0.020  G: 0.745  T: 0.023
+Mixture weights: 0.058 0.002 0.000 0.000 0.050 0.000 0.056 0.190 0.000 0.040 0.111 0.008 0.000 0.217 0.016 0.000 0.003 0.006 0.022 0.044 0.177
+Gamma shape alpha: 0.435
+Parameters optimization took 3 rounds (0.130 sec)
+WARNING: The mixture model might be overfitting because some mixture weights are estimated close to zero
+BEST SCORE FOUND : -259.113
+Creating bootstrap support values...
+Split supports printed to NEXUS file tree/phylo/iqtree/iqtree.splits.nex
+Total tree length: 0.090
+
+Total number of iterations: 101
+CPU time used for tree search: 0.993 sec (0h:0m:0s)
+Wall-clock time used for tree search: 0.510 sec (0h:0m:0s)
+Total CPU time used: 8.809 sec (0h:0m:8s)
+Total wall-clock time used: 8.000 sec (0h:0m:7s)
+
+Computing bootstrap consensus tree...
+Reading input file tree/phylo/iqtree/iqtree.splits.nex...
+4 taxa and 7 splits.
+Consensus tree written to tree/phylo/iqtree/iqtree.contree
+Reading input trees file tree/phylo/iqtree/iqtree.contree
+Log-likelihood of consensus tree: -259.113
+
+Analysis results written to: 
+  IQ-TREE report:                tree/phylo/iqtree/iqtree.iqtree
+  Maximum-likelihood tree:       tree/phylo/iqtree/iqtree.treefile
+  Likelihood distances:          tree/phylo/iqtree/iqtree.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          tree/phylo/iqtree/iqtree.splits.nex
+  Consensus tree:                tree/phylo/iqtree/iqtree.contree
+  Screen log file:               tree/phylo/iqtree/iqtree.log
+
+Date and Time: Sat Aug  3 17:45:15 2019

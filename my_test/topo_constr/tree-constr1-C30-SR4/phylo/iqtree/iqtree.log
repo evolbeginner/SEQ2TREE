@@ -1,0 +1,209 @@
+IQ-TREE multicore version 2.1.1 COVID-edition for Linux 64-bit built Aug 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cl001 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -redo -s tree-constr1-C30-SR4/recoded.aln -m C30SR4 -pre tree-constr1-C30-SR4/phylo/iqtree/iqtree -ft tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.contree -nt 6 -bb 1000 -mdef /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C30SR4.nex -g constr1
+Seed:    157623 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu May 20 16:03:36 2021
+Kernel:  AVX+FMA - 6 threads (40 CPU cores detected)
+
+Reading alignment file tree-constr1-C30-SR4/recoded.aln ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 10 sequences with 217 columns, 201 distinct patterns
+17 parsimony-informative, 71 singleton sites, 129 constant sites
+    Gap/Ambiguity  Composition  p-value
+   1  1    43.78%    passed     91.26%
+   2  2    36.87%    passed     94.75%
+   3  3    37.79%    passed     84.57%
+   4  4    40.55%    passed     78.49%
+   5  5    38.71%    passed     86.35%
+   6  6    41.47%    passed     69.49%
+   7  7    39.17%    passed     79.97%
+   8  8    35.48%    passed     90.74%
+   9  9    43.78%    passed     66.01%
+  10  10   63.59%    passed     71.25%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL   42.12%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+===> COMPUTING SITE FREQUENCY MODEL BASED ON TREE FILE tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.contree
+Reading model definition file /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C30SR4.nex ... 79 models and 244 frequency vectors loaded
+Model C30SR4 is alias for GTR+G+FMIX{C30SR41,C30SR42,C30SR43,C30SR44,C30SR45,C30SR46,C30SR47,C30SR48,C30SR49,C30SR410,C30SR411,C30SR412,C30SR413,C30SR414,C30SR415,C30SR416,C30SR417,C30SR418,C30SR419,C30SR420,C30SR421,C30SR422,C30SR423,C30SR424,C30SR425,C30SR426,C30SR427,C30SR428,C30SR429,C30SR430}+F
+NOTE: 9 MB RAM is required!
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+1. Initial log-likelihood: -754.073
+2. Current log-likelihood: -698.743
+3. Current log-likelihood: -696.666
+4. Current log-likelihood: -696.256
+5. Current log-likelihood: -696.133
+Optimal log-likelihood: -696.072
+Rate parameters:  A-C: 0.00010  A-G: 7.17014  A-T: 15.32623  C-G: 40.05222  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.331  C: 0.020  G: 0.349  T: 0.299
+Rate parameters:  A-C: 0.00010  A-G: 1.91106  A-T: 2.78558  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.604  C: 0.020  G: 0.353  T: 0.022
+Rate parameters:  A-C: 0.00010  A-G: 10.48218  A-T: 20.18648  C-G: 50.66452  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.397  C: 0.033  G: 0.403  T: 0.167
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.27972  C-G: 0.00010  C-T: 0.77994  G-T: 1.00000
+Base frequencies:  A: 0.049  C: 0.009  G: 0.006  T: 0.936
+Rate parameters:  A-C: 0.00010  A-G: 4.46912  A-T: 13.78348  C-G: 52.31963  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.197  C: 0.018  G: 0.762  T: 0.023
+Rate parameters:  A-C: 0.00010  A-G: 96.88853  A-T: 0.00010  C-G: 0.00010  C-T: 79.32060  G-T: 1.00000
+Base frequencies:  A: 0.027  C: 0.086  G: 0.010  T: 0.878
+Rate parameters:  A-C: 0.00010  A-G: 3.46586  A-T: 5.44470  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.450  C: 0.017  G: 0.485  T: 0.048
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 3.36051  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.109  C: 0.188  G: 0.040  T: 0.663
+Rate parameters:  A-C: 0.00010  A-G: 9.49143  A-T: 11.55744  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.597  C: 0.134  G: 0.035  T: 0.234
+Rate parameters:  A-C: 0.00010  A-G: 0.73270  A-T: 12.12281  C-G: 28.87599  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.164  C: 0.081  G: 0.387  T: 0.368
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 10.55071  C-G: 58.28267  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.191  C: 0.421  G: 0.136  T: 0.252
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 5.02439  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.228  C: 0.036  G: 0.175  T: 0.561
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.45630  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.060  C: 0.020  G: 0.031  T: 0.889
+Rate parameters:  A-C: 0.00010  A-G: 84.81611  A-T: 98.11052  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.823  C: 0.028  G: 0.100  T: 0.049
+Rate parameters:  A-C: 0.00010  A-G: 33.75955  A-T: 3.71851  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.903  C: 0.029  G: 0.022  T: 0.046
+Rate parameters:  A-C: 0.00010  A-G: 3.65218  A-T: 5.87554  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.438  C: 0.018  G: 0.499  T: 0.045
+Rate parameters:  A-C: 0.00010  A-G: 6.70745  A-T: 11.35590  C-G: 29.30139  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.498  C: 0.042  G: 0.445  T: 0.015
+Rate parameters:  A-C: 0.00010  A-G: 68.34553  A-T: 98.51650  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.724  C: 0.025  G: 0.167  T: 0.085
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 0.27166  C-G: 0.00010  C-T: 0.80523  G-T: 1.00000
+Base frequencies:  A: 0.019  C: 0.009  G: 0.006  T: 0.966
+Rate parameters:  A-C: 0.00010  A-G: 8.53119  A-T: 15.88266  C-G: 28.65234  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.389  C: 0.038  G: 0.554  T: 0.018
+Rate parameters:  A-C: 0.00010  A-G: 0.96904  A-T: 7.26786  C-G: 11.59629  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.317  C: 0.281  G: 0.328  T: 0.074
+Rate parameters:  A-C: 0.00010  A-G: 0.69375  A-T: 75.81651  C-G: 83.92034  C-T: 1.39558  G-T: 1.00000
+Base frequencies:  A: 0.031  C: 0.754  G: 0.025  T: 0.190
+Rate parameters:  A-C: 0.00010  A-G: 14.24297  A-T: 100.00000  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.751  C: 0.030  G: 0.203  T: 0.016
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 100.00000  C-G: 41.40069  C-T: 0.50181  G-T: 1.00000
+Base frequencies:  A: 0.023  C: 0.534  G: 0.008  T: 0.435
+Rate parameters:  A-C: 0.00010  A-G: 0.00073  A-T: 0.04488  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.456  C: 0.034  G: 0.025  T: 0.485
+Rate parameters:  A-C: 0.00010  A-G: 9.30720  A-T: 26.36321  C-G: 28.45733  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.218  C: 0.034  G: 0.678  T: 0.070
+Rate parameters:  A-C: 0.00010  A-G: 11.32111  A-T: 22.65518  C-G: 42.61004  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.383  C: 0.043  G: 0.524  T: 0.050
+Rate parameters:  A-C: 0.00010  A-G: 7.97968  A-T: 19.68736  C-G: 99.96544  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.551  C: 0.046  G: 0.340  T: 0.063
+Rate parameters:  A-C: 0.00010  A-G: 8.04189  A-T: 24.51532  C-G: 22.14733  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.159  C: 0.046  G: 0.737  T: 0.058
+Rate parameters:  A-C: 0.00010  A-G: 0.00010  A-T: 3.25212  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.207  C: 0.038  G: 0.019  T: 0.735
+Rate parameters:  A-C: 0.00010  A-G: 1.43473  A-T: 9.23404  C-G: 49.34099  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.355  C: 0.070  G: 0.264  T: 0.311
+Mixture weights: 0.180 0.010 0.013 0.099 0.000 0.000 0.312 0.000 0.000 0.000 0.000 0.139 0.000 0.000 0.000 0.150 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.000 0.050 0.000 0.000 0.000 0.000 0.046 0.000
+Gamma shape alpha: 998.431
+Parameters optimization took 5 rounds (23.018 sec)
+Computing posterior mean site frequencies....
+Site state frequency vectors printed to tree-constr1-C30-SR4/phylo/iqtree/iqtree.sitefreq
+
+===> CONTINUE ANALYSIS USING THE INFERRED SITE FREQUENCY MODEL
+Reading constraint tree constr1...
+WARNING: Rooted constraint tree will be treated as unrooted tree
+INFO: Constraint tree will be applied to ML tree and all bootstrap trees.
+Reading model definition file /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C30SR4.nex ... 79 models and 244 frequency vectors loaded
+Creating fast initial parsimony tree by random order stepwise addition...
+0.001 seconds, parsimony score: 108 (based on 88 sites)
+Generating 1000 samples for ultrafast bootstrap (seed: 157623)...
+Model C30SR4 is alias for GTR+G+FMIX{C30SR41,C30SR42,C30SR43,C30SR44,C30SR45,C30SR46,C30SR47,C30SR48,C30SR49,C30SR410,C30SR411,C30SR412,C30SR413,C30SR414,C30SR415,C30SR416,C30SR417,C30SR418,C30SR419,C30SR420,C30SR421,C30SR422,C30SR423,C30SR424,C30SR425,C30SR426,C30SR427,C30SR428,C30SR429,C30SR430}+F
+
+NOTE: 1 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -659.492
+2. Current log-likelihood: -600.105
+3. Current log-likelihood: -599.343
+Optimal log-likelihood: -599.204
+Rate parameters:  A-C: 0.00010  A-G: 1.54728  A-T: 4.85688  C-G: 17.18926  C-T: 1.00908  G-T: 1.00000
+Base frequencies:  A: 0.431  C: 0.018  G: 0.463  T: 0.087
+Gamma shape alpha: 998.442
+Parameters optimization took 3 rounds (0.144 sec)
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.021 second
+Computing log-likelihood of 85 initial trees ... 0.080 seconds
+Current best score: -597.373
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -596.168
+BETTER TREE FOUND at iteration 5: -596.168
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+Iteration 10 / LogL: -596.168 / Time: 0h:0m:0s
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+Iteration 20 / LogL: -596.168 / Time: 0h:0m:0s
+Finish initializing candidate tree set (4)
+Current best tree score: -596.168 / CPU time: 0.348
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+Iteration 30 / LogL: -596.168 / Time: 0h:0m:0s (0h:0m:1s left)
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+Iteration 40 / LogL: -596.168 / Time: 0h:0m:0s (0h:0m:1s left)
+Iteration 50 / LogL: -596.168 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -604.912
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+Iteration 60 / LogL: -596.168 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 70 / LogL: -596.168 / Time: 0h:0m:1s (0h:0m:0s left)
+UPDATE BEST LOG-LIKELIHOOD: -596.168
+Iteration 80 / LogL: -596.168 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 90 / LogL: -596.168 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 100 / LogL: -596.168 / Time: 0h:0m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -604.650
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.995
+TREE SEARCH COMPLETED AFTER 106 ITERATIONS / Time: 0h:0m:1s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -596.168
+2. Current log-likelihood: -596.150
+Optimal log-likelihood: -596.146
+Rate parameters:  A-C: 0.00010  A-G: 1.60056  A-T: 4.93160  C-G: 18.80189  C-T: 0.95649  G-T: 1.00000
+Base frequencies:  A: 0.431  C: 0.018  G: 0.463  T: 0.087
+Gamma shape alpha: 998.442
+Parameters optimization took 2 rounds (0.113 sec)
+BEST SCORE FOUND : -596.146
+Creating bootstrap support values...
+Split supports printed to NEXUS file tree-constr1-C30-SR4/phylo/iqtree/iqtree.splits.nex
+Total tree length: 1.245
+
+Total number of iterations: 106
+CPU time used for tree search: 8.883 sec (0h:0m:8s)
+Wall-clock time used for tree search: 1.502 sec (0h:0m:1s)
+Total CPU time used: 10.583 sec (0h:0m:10s)
+Total wall-clock time used: 1.793 sec (0h:0m:1s)
+
+Computing bootstrap consensus tree...
+Reading input file tree-constr1-C30-SR4/phylo/iqtree/iqtree.splits.nex...
+10 taxa and 84 splits.
+Consensus tree written to tree-constr1-C30-SR4/phylo/iqtree/iqtree.contree
+Reading input trees file tree-constr1-C30-SR4/phylo/iqtree/iqtree.contree
+Log-likelihood of consensus tree: -596.146
+
+Analysis results written to: 
+  IQ-TREE report:                tree-constr1-C30-SR4/phylo/iqtree/iqtree.iqtree
+  Maximum-likelihood tree:       tree-constr1-C30-SR4/phylo/iqtree/iqtree.treefile
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          tree-constr1-C30-SR4/phylo/iqtree/iqtree.splits.nex
+  Consensus tree:                tree-constr1-C30-SR4/phylo/iqtree/iqtree.contree
+  Screen log file:               tree-constr1-C30-SR4/phylo/iqtree/iqtree.log
+
+Date and Time: Thu May 20 16:04:00 2021

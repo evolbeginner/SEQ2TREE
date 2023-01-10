@@ -1,0 +1,1 @@
+--seq_indir pep --outdir tree-fast --force --cpu 10 --add_gaps --fasttree

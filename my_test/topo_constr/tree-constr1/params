@@ -1,0 +1,1 @@
+--seq_indir pep --outdir tree-constr1 --force --cpu 6 --uni_model --iqtree --tree_add_cmd -g constr1

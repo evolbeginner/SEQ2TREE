@@ -1,0 +1,198 @@
+IQ-TREE 2.2.0 COVID-edition built Nov 20 2021
+
+Input file name: ../../combined.aln
+Type of analysis: tree reconstruction + ultrafast bootstrap (1000 replicates)
+Random seed number: 373262
+
+REFERENCES
+----------
+
+To cite IQ-TREE please use:
+
+Bui Quang Minh, Heiko A. Schmidt, Olga Chernomor, Dominik Schrempf,
+Michael D. Woodhams, Arndt von Haeseler, and Robert Lanfear (2020)
+IQ-TREE 2: New models and efficient methods for phylogenetic inference
+in the genomic era. Mol. Biol. Evol., in press.
+https://doi.org/10.1093/molbev/msaa015
+
+Since you used ultrafast bootstrap (UFBoot) please also cite: 
+
+Diep Thi Hoang, Olga Chernomor, Arndt von Haeseler, Bui Quang Minh,
+and Le Sy Vinh (2018) UFBoot2: Improving the ultrafast bootstrap
+approximation. Mol. Biol. Evol., 35:518–522.
+https://doi.org/10.1093/molbev/msx281
+
+SEQUENCE ALIGNMENT
+------------------
+
+Input data: 20 sequences with 651 amino-acid sites
+Number of constant sites: 321 (= 49.3088% of all sites)
+Number of invariant (constant or ambiguous constant) sites: 321 (= 49.3088% of all sites)
+Number of parsimony informative sites: 291
+Number of distinct site patterns: 140
+
+SUBSTITUTION PROCESS
+--------------------
+
+Mixture model of substitution: C20+I+G4
+
+  No  Component      Rate    Weight   Parameters
+   1  POISSON+FC20pi1  1.0000   0.0560   POISSON+FC20pi1
+   2  POISSON+FC20pi2  1.0000   0.0515   POISSON+FC20pi2
+   3  POISSON+FC20pi3  1.0000   0.0813   POISSON+FC20pi3
+   4  POISSON+FC20pi4  1.0000   0.0722   POISSON+FC20pi4
+   5  POISSON+FC20pi5  1.0000   0.0557   POISSON+FC20pi5
+   6  POISSON+FC20pi6  1.0000   0.0331   POISSON+FC20pi6
+   7  POISSON+FC20pi7  1.0000   0.0590   POISSON+FC20pi7
+   8  POISSON+FC20pi8  1.0000   0.0264   POISSON+FC20pi8
+   9  POISSON+FC20pi9  1.0000   0.0308   POISSON+FC20pi9
+  10  POISSON+FC20pi10  1.0000   0.0377   POISSON+FC20pi10
+  11  POISSON+FC20pi11  1.0000   0.0303   POISSON+FC20pi11
+  12  POISSON+FC20pi12  1.0000   0.0809   POISSON+FC20pi12
+  13  POISSON+FC20pi13  1.0000   0.0263   POISSON+FC20pi13
+  14  POISSON+FC20pi14  1.0000   0.0579   POISSON+FC20pi14
+  15  POISSON+FC20pi15  1.0000   0.0371   POISSON+FC20pi15
+  16  POISSON+FC20pi16  1.0000   0.0587   POISSON+FC20pi16
+  17  POISSON+FC20pi17  1.0000   0.0561   POISSON+FC20pi17
+  18  POISSON+FC20pi18  1.0000   0.0350   POISSON+FC20pi18
+  19  POISSON+FC20pi19  1.0000   0.0545   POISSON+FC20pi19
+  20  POISSON+FC20pi20  1.0000   0.0596   POISSON+FC20pi20
+
+Model of rate heterogeneity: Invar+Gamma with 4 categories
+Proportion of invariable sites: 0.1569
+Gamma shape alpha: 0.7103
+
+ Category  Relative_rate  Proportion
+  0         0              0.1569
+  1         0.0906         0.2108
+  2         0.4369         0.2108
+  3         1.1015         0.2108
+  4         3.1156         0.2108
+Relative rates are computed as MEAN of the portion of the Gamma distribution falling in the category.
+
+MAXIMUM LIKELIHOOD TREE
+-----------------------
+
+Log-likelihood of the tree: -7892.4826 (s.e. 281.2350)
+Unconstrained log-likelihood (without tree): -3010.4763
+Number of free parameters (#branches + #model parameters): 39
+Akaike information criterion (AIC) score: 15862.9651
+Corrected Akaike information criterion (AICc) score: 15868.0715
+Bayesian information criterion (BIC) score: 16037.6270
+
+Total tree length (sum of branch lengths): 7.1244
+Sum of internal branch lengths: 3.8234 (53.6668% of tree length)
+
+WARNING: 2 near-zero internal branches (<0.0015) should be treated with caution
+         Such branches are denoted by '**' in the figure below
+
+NOTE: Tree is UNROOTED although outgroup taxon 'A1USR1.1' is drawn at root
+Numbers in parentheses are  ultrafast bootstrap support (%)
+
++**A1USR1.1
+|
+|     +--Q6FZD9.1
+|  +--| (67)
+|  |  |                                                     +--Q2SU44.1
+|  |  |                                                 +---| (100)
+|  |  |                                                 |   +--Q0BJ29.1
+|  |  |                                         +-------| (99)
+|  |  |                                         |       |  +-----A9IHT0.1
+|  |  |                                         |       +--| (42)
+|  |  |                                         |          +---A4G9S1.1
+|  |  |                                      +**| (52)
+|  |  |                                      |  +---A1TJT4.1
+|  |  +--------------------------------------| (100)
+|  |                                         +--A1VJ32.1
++--| (62)
+|  |       +--------B0T2D9.1
+|  |    +--| (56)
+|  |    |  |  +------Q3J5Q5.1
+|  |    |  +--| (55)
+|  |    |     |          +--A5V5Y5.1
+|  |    |     +----------| (95)
+|  |    |                +--Q1GPB6.1
+|  +----| (57)
+|       |     +-------Q2W2K8.1
+|       |  +--| (81)
+|       |  |  +------A5FZU8.1
+|       +--| (58)
+|          +--------------------------------------------------C6C1A2.1
+|
+|                                                 +**A8F2D0.2
++-------------------------------------------------| (100)
+                                                  |        +--A8GPD3.1
+                                                  |     +**| (88)
+                                                  |     |  +**Q4UMR2.1
+                                                  |  +--| (97)
+                                                  |  |  +--Q9ZCS2.1
+                                                  +--| (95)
+                                                     +--A8GT52.1
+
+Tree in newick format:
+
+(A1USR1.1:0.0000020411,((Q6FZD9.1:0.0453701774,((((Q2SU44.1:0.0153347490,Q0BJ29.1:0.0152215736)100:0.1288164853,(A9IHT0.1:0.1943925194,A4G9S1.1:0.1339535916)42:0.0500696796)99:0.2503440995,A1TJT4.1:0.1478143134)52:0.0000020339,A1VJ32.1:0.0549249325)100:1.1848844730)67:0.0250180779,((B0T2D9.1:0.2917688323,(Q3J5Q5.1:0.2338854620,(A5V5Y5.1:0.0595457796,Q1GPB6.1:0.0484497430)95:0.3290413590)55:0.0531558506)56:0.0288136382,((Q2W2K8.1:0.2569996562,A5FZU8.1:0.2226123815)81:0.0227458621,C6C1A2.1:1.5388138132)58:0.0613101068)57:0.1570856164)62:0.0251508095,(A8F2D0.2:0.0000020771,(((A8GPD3.1:0.0068808959,Q4UMR2.1:0.0000010137)88:0.0000023660,Q9ZCS2.1:0.0139537526)97:0.0068940958,A8GT52.1:0.0210227728)95:0.0069273854)100:1.4931686900);
+
+CONSENSUS TREE
+--------------
+
+Consensus tree is constructed from 1000 bootstrap trees
+Log-likelihood of consensus tree: -7892.483197
+Robinson-Foulds distance between ML tree and consensus tree: 0
+
+Branches with support >0.000000% are kept (extended consensus)
+Branch lengths are optimized by maximum likelihood on original alignment
+Numbers in parentheses are bootstrap supports (%)
+
++--A1USR1.1
+|
+|     +--Q6FZD9.1
+|  +--| (67)
+|  |  |                                                     +--Q2SU44.1
+|  |  |                                                 +---| (100)
+|  |  |                                                 |   +--Q0BJ29.1
+|  |  |                                         +-------| (99)
+|  |  |                                         |       |  +-----A9IHT0.1
+|  |  |                                         |       +--| (42)
+|  |  |                                         |          +---A4G9S1.1
+|  |  |                                      +--| (52)
+|  |  |                                      |  +---A1TJT4.1
+|  |  +--------------------------------------| (100)
+|  |                                         +--A1VJ32.1
++--| (62)
+|  |       +--------B0T2D9.1
+|  |    +--| (56)
+|  |    |  |  +------Q3J5Q5.1
+|  |    |  +--| (55)
+|  |    |     |          +--A5V5Y5.1
+|  |    |     +----------| (95)
+|  |    |                +--Q1GPB6.1
+|  +----| (57)
+|       |     +-------Q2W2K8.1
+|       |  +--| (81)
+|       |  |  +------A5FZU8.1
+|       +--| (58)
+|          +--------------------------------------------------C6C1A2.1
+|
+|                                                 +--A8F2D0.2
++-------------------------------------------------| (100)
+                                                  |        +--A8GPD3.1
+                                                  |     +--| (88)
+                                                  |     |  +--Q4UMR2.1
+                                                  |  +--| (97)
+                                                  |  |  +--Q9ZCS2.1
+                                                  +--| (95)
+                                                     +--A8GT52.1
+
+
+Consensus tree in newick format: 
+
+(A1USR1.1:0.0000025172,((Q6FZD9.1:0.0454538398,((((Q2SU44.1:0.0153301517,Q0BJ29.1:0.0151507718)100:0.1284169355,(A9IHT0.1:0.1938157440,A4G9S1.1:0.1334035881)42:0.0500143528)99:0.2493895158,A1TJT4.1:0.1474208798)52:0.0000027827,A1VJ32.1:0.0547373358)100:1.1797946247)67:0.0248047515,((B0T2D9.1:0.2909628993,(Q3J5Q5.1:0.2333068858,(A5V5Y5.1:0.0597310074,Q1GPB6.1:0.0481351179)95:0.3281704981)55:0.0530732215)56:0.0287827310,((Q2W2K8.1:0.2561674885,A5FZU8.1:0.2219779315)81:0.0227976435,C6C1A2.1:1.5326690924)58:0.0610669363)57:0.1567602523)62:0.0251121576,(A8F2D0.2:0.0000021314,(((A8GPD3.1:0.0068694649,Q4UMR2.1:0.0000025020)88:0.0000025020,Q9ZCS2.1:0.0139305563)97:0.0068824018,A8GT52.1:0.0209873991)95:0.0069160847)100:1.4888932387);
+
+TIME STAMP
+----------
+
+Date and time: Sat Jan 15 12:22:09 2022
+Total CPU time used: 1039.277742 seconds (0h:17m:19s)
+Total wall-clock time used: 521.6606591 seconds (0h:8m:41s)
+

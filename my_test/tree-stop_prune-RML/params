@@ -1,0 +1,1 @@
+--seq_indir pep/ --outdir tree-stop_prune-RML --force --cpu 10 --iqtree --RML --lg

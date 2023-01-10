@@ -1,0 +1,1 @@
+--seq_indir pep --outdir tree --force --cpu 6 --uni_model --iqtree

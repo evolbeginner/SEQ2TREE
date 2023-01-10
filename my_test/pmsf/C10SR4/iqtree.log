@@ -1,0 +1,173 @@
+IQ-TREE multicore version 1.6.11 for Linux 64-bit built Jun  6 2019
+Developed by Bui Quang Minh, Nguyen Lam Tung, Olga Chernomor,
+Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cl001 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -redo -s recoded.aln -m C10SR4 -pre C10SR4/iqtree -ft C10SR4/guide/iqtree.contree -nt 3 -bb 1000 -mdef /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C10SR4.nex
+Seed:    99302 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Aug  3 17:13:33 2019
+Kernel:  AVX+FMA - 3 threads (40 CPU cores detected)
+
+Reading alignment file recoded.aln ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+WARNING: 15 sites contain only gaps or ambiguous characters.
+Alignment has 5 sequences with 204 columns, 24 distinct patterns
+9 parsimony-informative, 15 singleton sites, 180 constant sites
+          Gap/Ambiguity  Composition  p-value
+   1  Q98N40.2    8.33%    passed     99.97%
+   2  A6X0D5.1    8.82%    passed     87.81%
+   3  C3MAZ7.1    7.84%    passed     96.24%
+   4  Q92QF3.1    7.35%    passed     99.96%
+   5  Q8UE35.1    7.84%    passed     98.90%
+****  TOTAL       8.04%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+
+===> COMPUTING SITE FREQUENCY MODEL BASED ON TREE FILE C10SR4/guide/iqtree.contree
+Reading model definition file /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C10SR4.nex ... 70 models and 224 frequency vectors loaded
+Model C10SR4 is alias for GTR+G+FMIX{C10SR41,C10SR42,C10SR43,C10SR44,C10SR45,C10SR46,C10SR47,C10SR48,C10SR49,C10SR410}+F
+NOTE: 0 MB RAM is required!
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+1. Initial log-likelihood: -379.404
+2. Current log-likelihood: -361.132
+3. Current log-likelihood: -360.581
+Optimal log-likelihood: -360.505
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.372  C: 0.048  G: 0.326  T: 0.254
+Rate parameters:  A-C: 0.00010  A-G: 0.01648  A-T: 100.00000  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.814  C: 0.045  G: 0.038  T: 0.103
+Rate parameters:  A-C: 0.00059  A-G: 0.24112  A-T: 100.00000  C-G: 9.83002  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.321  C: 0.049  G: 0.187  T: 0.442
+Rate parameters:  A-C: 100.00000  A-G: 0.71664  A-T: 1.25473  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.073  C: 0.014  G: 0.008  T: 0.905
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 1.57684  C-T: 0.00522  G-T: 1.00000
+Base frequencies:  A: 0.497  C: 0.049  G: 0.437  T: 0.017
+Rate parameters:  A-C: 100.00000  A-G: 27.89847  A-T: 0.64309  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.047  C: 0.032  G: 0.022  T: 0.898
+Rate parameters:  A-C: 100.00000  A-G: 14.40776  A-T: 0.00010  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.313  C: 0.023  G: 0.618  T: 0.046
+Rate parameters:  A-C: 0.00010  A-G: 0.00107  A-T: 1.01562  C-G: 100.00000  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.253  C: 0.300  G: 0.253  T: 0.194
+Rate parameters:  A-C: 0.00010  A-G: 1.60462  A-T: 0.00489  C-G: 25.88599  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.042  C: 0.456  G: 0.016  T: 0.486
+Rate parameters:  A-C: 100.00000  A-G: 23.66515  A-T: 0.00010  C-G: 0.00010  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.240  C: 0.048  G: 0.633  T: 0.079
+Rate parameters:  A-C: 0.00010  A-G: 100.00000  A-T: 0.00010  C-G: 0.62511  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.724  C: 0.034  G: 0.187  T: 0.056
+Mixture weights: 0.008 0.099 0.000 0.189 0.044 0.015 0.365 0.000 0.054 0.075 0.151
+Gamma shape alpha: 26.025
+Parameters optimization took 3 rounds (6.416 sec)
+Computing posterior mean site frequencies....
+Site state frequency vectors printed to C10SR4/iqtree.sitefreq
+
+===> CONTINUE ANALYSIS USING THE INFERRED SITE FREQUENCY MODEL
+Reading model definition file /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C10SR4.nex ... 70 models and 224 frequency vectors loaded
+Reading model definition file /home-user/sswang/tools/self_bao_cun/IQTREE/recoding/new_model/C10SR4.nex ... 70 models and 224 frequency vectors loaded
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.000 seconds
+Generating 1000 samples for ultrafast bootstrap (seed: 99302)...
+Model C10SR4 is alias for GTR+G+FMIX{C10SR41,C10SR42,C10SR43,C10SR44,C10SR45,C10SR46,C10SR47,C10SR48,C10SR49,C10SR410}+F
+
+NOTE: 0 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -nt AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -241.764
+2. Current log-likelihood: -232.225
+3. Current log-likelihood: -231.851
+Optimal log-likelihood: -231.787
+Rate parameters:  A-C: 3.48779  A-G: 2.07295  A-T: 0.48298  C-G: 1.15915  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.128  C: 0.066  G: 0.078  T: 0.728
+Gamma shape alpha: 0.460
+Parameters optimization took 3 rounds (0.108 sec)
+Computing ML distances based on estimated model parameters... 0.001 sec
+Computing BIONJ tree...
+0.000 seconds
+Log-likelihood of BIONJ tree: -231.787
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.016 second
+Computing log-likelihood of 4 initial trees ... 0.001 seconds
+Current best score: -231.787
+
+Do NNI search on 5 best initial trees
+Finish initializing candidate tree set (5)
+Current best tree score: -231.787 / CPU time: 0.038
+Number of iterations: 5
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -231.787
+Iteration 10 / LogL: -231.787 / Time: 0h:0m:0s
+UPDATE BEST LOG-LIKELIHOOD: -231.787
+UPDATE BEST LOG-LIKELIHOOD: -231.787
+Iteration 20 / LogL: -231.828 / Time: 0h:0m:0s
+UPDATE BEST LOG-LIKELIHOOD: -231.787
+Iteration 30 / LogL: -231.791 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 40 / LogL: -231.787 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -231.827 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -244.180
+Iteration 60 / LogL: -235.013 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -231.787 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 80 / LogL: -231.828 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 90 / LogL: -231.828 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 100 / LogL: -231.828 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -243.654
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
+TREE SEARCH COMPLETED AFTER 101 ITERATIONS / Time: 0h:0m:0s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -231.787
+2. Current log-likelihood: -231.705
+3. Current log-likelihood: -231.541
+4. Current log-likelihood: -231.447
+5. Current log-likelihood: -231.381
+6. Current log-likelihood: -231.331
+7. Current log-likelihood: -230.927
+8. Current log-likelihood: -230.768
+9. Current log-likelihood: -230.738
+10. Current log-likelihood: -230.123
+11. Current log-likelihood: -229.919
+12. Current log-likelihood: -229.904
+13. Current log-likelihood: -229.892
+14. Current log-likelihood: -229.874
+15. Current log-likelihood: -229.840
+16. Current log-likelihood: -229.829
+17. Current log-likelihood: -229.759
+18. Current log-likelihood: -229.650
+Optimal log-likelihood: -229.641
+Rate parameters:  A-C: 13.17686  A-G: 5.33484  A-T: 1.22345  C-G: 3.75169  C-T: 0.00010  G-T: 1.00000
+Base frequencies:  A: 0.128  C: 0.066  G: 0.078  T: 0.728
+Gamma shape alpha: 1.123
+Parameters optimization took 18 rounds (0.055 sec)
+BEST SCORE FOUND : -229.641
+Creating bootstrap support values...
+Split supports printed to NEXUS file C10SR4/iqtree.splits.nex
+Total tree length: 0.221
+
+Total number of iterations: 101
+CPU time used for tree search: 1.571 sec (0h:0m:1s)
+Wall-clock time used for tree search: 0.535 sec (0h:0m:0s)
+Total CPU time used: 1.976 sec (0h:0m:1s)
+Total wall-clock time used: 0.721 sec (0h:0m:0s)
+
+Computing bootstrap consensus tree...
+Reading input file C10SR4/iqtree.splits.nex...
+5 taxa and 15 splits.
+Consensus tree written to C10SR4/iqtree.contree
+Reading input trees file C10SR4/iqtree.contree
+Log-likelihood of consensus tree: -229.641
+
+Analysis results written to: 
+  IQ-TREE report:                C10SR4/iqtree.iqtree
+  Maximum-likelihood tree:       C10SR4/iqtree.treefile
+  Likelihood distances:          C10SR4/iqtree.mldist
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          C10SR4/iqtree.splits.nex
+  Consensus tree:                C10SR4/iqtree.contree
+  Screen log file:               C10SR4/iqtree.log
+
+Date and Time: Sat Aug  3 17:13:40 2019

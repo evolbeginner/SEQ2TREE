@@ -1,0 +1,1 @@
+--seq_indir pep --outdir tree --force --cpu 2 --iqtree --tree_add_cmd -mset WAG,LG,JTT -mrate E,G,I,G+I --pmsf_model C20SR4 --recode SR4

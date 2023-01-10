@@ -1,0 +1,118 @@
+IQ-TREE multicore version 2.1.1 COVID-edition for Linux 64-bit built Aug 22 2020
+Developed by Bui Quang Minh, James Barbetti, Nguyen Lam Tung,
+Olga Chernomor, Heiko Schmidt, Dominik Schrempf, Michael Woodhams.
+
+Host:    cl001 (AVX2, FMA3, 125 GB RAM)
+Command: iqtree -redo -s tree-constr1-C30-SR4/recoded.aln -m GTR+G+F -pre tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree -nt 6 -bb 1000 -g constr1
+Seed:    641628 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Thu May 20 16:03:34 2021
+Kernel:  AVX+FMA - 6 threads (40 CPU cores detected)
+
+Reading alignment file tree-constr1-C30-SR4/recoded.aln ... Fasta format detected
+Alignment most likely contains DNA/RNA sequences
+Alignment has 10 sequences with 217 columns, 201 distinct patterns
+17 parsimony-informative, 71 singleton sites, 129 constant sites
+    Gap/Ambiguity  Composition  p-value
+   1  1    43.78%    passed     91.26%
+   2  2    36.87%    passed     94.75%
+   3  3    37.79%    passed     84.57%
+   4  4    40.55%    passed     78.49%
+   5  5    38.71%    passed     86.35%
+   6  6    41.47%    passed     69.49%
+   7  7    39.17%    passed     79.97%
+   8  8    35.48%    passed     90.74%
+   9  9    43.78%    passed     66.01%
+  10  10   63.59%    passed     71.25%
+WARNING: 1 sequences contain more than 50% gaps/ambiguity
+****  TOTAL   42.12%  0 sequences failed composition chi2 test (p-value<5%; df=3)
+Reading constraint tree constr1...
+WARNING: Rooted constraint tree will be treated as unrooted tree
+INFO: Constraint tree will be applied to ML tree and all bootstrap trees.
+Creating fast initial parsimony tree by random order stepwise addition...
+0.001 seconds, parsimony score: 108 (based on 88 sites)
+Generating 1000 samples for ultrafast bootstrap (seed: 641628)...
+
+NOTE: 1 MB RAM (0 GB) is required!
+WARNING: Number of threads seems too high for short alignments. Use -T AUTO to determine best number of threads.
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -764.155
+2. Current log-likelihood: -705.973
+3. Current log-likelihood: -705.099
+Optimal log-likelihood: -705.085
+Rate parameters:  A-C: 0.00010  A-G: 5.91706  A-T: 8.03543  C-G: 45.56380  C-T: 3.20679  G-T: 1.00000
+Base frequencies:  A: 0.331  C: 0.020  G: 0.349  T: 0.299
+Gamma shape alpha: 998.322
+Parameters optimization took 3 rounds (0.031 sec)
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 99 parsimony trees... 0.031 second
+Computing log-likelihood of 82 initial trees ... 0.070 seconds
+Current best score: -705.085
+
+Do NNI search on 20 best initial trees
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -705.085
+UPDATE BEST LOG-LIKELIHOOD: -705.085
+Iteration 10 / LogL: -705.085 / Time: 0h:0m:0s
+Iteration 20 / LogL: -705.085 / Time: 0h:0m:0s
+Finish initializing candidate tree set (2)
+Current best tree score: -705.085 / CPU time: 0.310
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+UPDATE BEST LOG-LIKELIHOOD: -705.085
+UPDATE BEST LOG-LIKELIHOOD: -705.085
+Iteration 30 / LogL: -705.085 / Time: 0h:0m:0s (0h:0m:1s left)
+Iteration 40 / LogL: -706.284 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 50 / LogL: -705.085 / Time: 0h:0m:0s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -714.108
+Iteration 60 / LogL: -705.085 / Time: 0h:0m:0s (0h:0m:0s left)
+Iteration 70 / LogL: -707.872 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 80 / LogL: -705.085 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 90 / LogL: -706.260 / Time: 0h:0m:1s (0h:0m:0s left)
+Iteration 100 / LogL: -705.085 / Time: 0h:0m:1s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -715.696
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.996
+TREE SEARCH COMPLETED AFTER 102 ITERATIONS / Time: 0h:0m:1s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -705.085
+Optimal log-likelihood: -705.084
+Rate parameters:  A-C: 0.00010  A-G: 5.94832  A-T: 8.08009  C-G: 45.55861  C-T: 3.21551  G-T: 1.00000
+Base frequencies:  A: 0.331  C: 0.020  G: 0.349  T: 0.299
+Gamma shape alpha: 998.322
+Parameters optimization took 1 rounds (0.004 sec)
+BEST SCORE FOUND : -705.084
+Creating bootstrap support values...
+Split supports printed to NEXUS file tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.splits.nex
+Total tree length: 0.994
+
+Total number of iterations: 102
+CPU time used for tree search: 8.399 sec (0h:0m:8s)
+Wall-clock time used for tree search: 1.418 sec (0h:0m:1s)
+Total CPU time used: 8.867 sec (0h:0m:8s)
+Total wall-clock time used: 1.499 sec (0h:0m:1s)
+
+Computing bootstrap consensus tree...
+Reading input file tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.splits.nex...
+10 taxa and 82 splits.
+Consensus tree written to tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.contree
+Reading input trees file tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.contree
+Log-likelihood of consensus tree: -705.085
+
+Analysis results written to: 
+  IQ-TREE report:                tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.iqtree
+  Maximum-likelihood tree:       tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.treefile
+
+Ultrafast bootstrap approximation results written to:
+  Split support values:          tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.splits.nex
+  Consensus tree:                tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.contree
+  Screen log file:               tree-constr1-C30-SR4/phylo/iqtree/guide/iqtree.log
+
+Date and Time: Thu May 20 16:03:36 2021

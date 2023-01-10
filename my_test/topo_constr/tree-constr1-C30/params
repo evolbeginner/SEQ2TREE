@@ -1,0 +1,1 @@
+--seq_indir pep --outdir tree-constr1-C30 --force --cpu 6 --iqtree --tree_add_cmd -g constr1 --pmsf_model C30
