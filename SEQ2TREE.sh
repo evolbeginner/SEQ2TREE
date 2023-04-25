@@ -84,12 +84,16 @@ is_stop_CHT=false
 is_stop_partition=false
 is_add_gaps=false
 is_uni_model=false
+is_LG=false
 is_lg=false
+is_Lg=false
 is_recode=false
 recode_model=''
 combined_model=''
 tree_add_cmd=''
 guide_tree_argu=''
+ft_argu=''
+topo_tree=''
 
 aln_outdir=''
 mfp="MFP+MERGE"
@@ -139,7 +143,7 @@ function usage(){
 	pf "--sp" "stop at partitioning"
 	pf "--add_gap" "use gaps for the seqs absent in an alignment. will acitive --sp if specified"
 	pf "--uni_model" "use a simple model (i.e. -m LG+G+I+F) instead of finding the best-fit one (default: off)"
-	pf "--lg" "use a -m LG+G (default: off)"
+	pf "--LG" "use a -m LG+G (default: off)"
 	pf "--tree_add_cmd" "additional commands for tree search"
 	pf "--pmsf_model|--pmsf" "the model for PMSF in IQ-Tree (default: off)"
 	pf "--combined_model" "the model for model in IQ-Tree (default: off)"
@@ -225,6 +229,19 @@ function runPartitionFinder(){
 }
 
 
+# for topo constraint
+function create_topo(){
+	if [ "$topo_tree" != '' ]; then
+		topo_outdir=$outdir/topo
+		mkdir $topo_outdir
+		cp $topo_tree $outdir/topo/topo.tre
+		grep "^>" $combined_aln | sed 's/>//' > $outdir/topo/species.topo.list
+		nw_prune -vf $outdir/topo/topo.tre $outdir/topo/species.topo.list | sponge $outdir/topo/topo.tre
+		tree_add_cmd=$tree_add_cmd" -g $outdir/topo/topo.tre"
+	fi
+}
+
+
 ######################################################
 params=$@
 
@@ -282,7 +299,7 @@ while [ $# -gt 0 ]; do
 		--trim)
 			if [ $2 == "trimal" ]; then
 				is_trimal=true
-			elif [ $2 == "RML" -o $2 == "rml" ]; then
+			elif [ $2 == "RML" -o $2 == "rml" -o $2 == "trim" ]; then
 				RML_argu='--RML'
 			elif [ $2 == "seqoverlap" ]; then
 				seqoverlap_argu="--seqoverlap"
@@ -316,11 +333,11 @@ while [ $# -gt 0 ]; do
 		--iqtree)
 			is_iqtree=true
 			;;
-		--fasttree)
+		--fasttree|--ft|--fast)
 			is_iqtree=true
 			is_fasttree=true
 			;;
-		--FastTree)
+		--FastTree|--FT|--FAST)
 			is_FastTree=true
 			;;
 		--st|--stop_trimal)
@@ -347,8 +364,19 @@ while [ $# -gt 0 ]; do
 		--uni_model|--uniModel)
 			is_uni_model=true
 			;;
-		--lg|--LG)
+		-m|--model)
+			model=$2
+			shift
+			;;
+		--LG)
+			is_LG=true
+			;;
+		--lg)
 			is_lg=true
+			mfp='MFP'
+			;;
+		--Lg)
+			is_Lg=true
 			;;
 		--model_TEST)
 			tree_add_cmd=$tree_add_cmd' '"-m TEST"
@@ -362,7 +390,7 @@ while [ $# -gt 0 ]; do
 		--model3-LG|--model-LG3)
 			tree_add_cmd=$tree_add_cmd' '"-mset LG -mrate E,I,G,I+G"
 			;;
-		--mfp|--MFP)
+		--mfp|--MFP|--spp)
 			mfp="MFP"
 			;;
 		--combined_model)
@@ -392,6 +420,10 @@ while [ $# -gt 0 ]; do
 			iqtree_version_argu="--iqtree1.6"
 			is_iqtree=true
 			;;
+		--topo)
+			topo_tree=$2
+			shift
+			;;
 		-h)
 			usage
 			;;
@@ -404,18 +436,20 @@ done
 
 
 ######################################################
-if [ "$is_lg" == false -a \
+if [ "$is_lg" == false -a "$is_LG" == false -a "$is_Lg" == false -a \
 	"$is_uni_model" = false -a \
-	"$tree_add_cmd" == '' ]; then
+	"$tree_add_cmd" == '' -a \
+	-z "$model" ]; then
 	errorMessage "Sub model must be specified! Exiting ......"
 fi
 
 
 ######################################################
-[ $num == "auto" ] && num=`ls -1 $seq_indir/*$suffix|wc -l`
+num_seqs_in_pep=`ls -1 $seq_indir/*$suffix|wc -l`
+[ "$num" == "auto" ] && num=$num_seqs_in_pep
+if [ $num -gt $num_seqs_in_pep ]; then echo "-n $num greater than seq # in pep/. Exiting ......"; exit 1; fi
 echo -e "${Green}Minimum No. of seqs is:\t$num${NC}" >&2
 echo ""
-
 
 echo -e "${Blue}tree_add_cmd: $tree_add_cmd${NC}"
 
@@ -530,6 +564,7 @@ fi
 if [ $is_iqtree == true ]; then
 	echo "Constructing phylogenetic tree using iqtree ......"
 	mkdir -p $iqtree_outdir
+
 	
 	$ruby $create_cfg --indir $good_aln_indir --suffix aln --aln $combined_aln --mfa2phy --cfg $cfg_outfile -n $num
 	sed '/\[data_blocks\]/,/#/!d' $cfg_outfile | sed '1d'| sed '$d' |awk '{print "NR, ",$0}' > $iqtree_outdir/iqtree.partition
@@ -550,6 +585,8 @@ if [ $is_iqtree == true ]; then
 		bb_str="-bb $bb"
 	fi
 
+	# create_topo
+	create_topo
 
 	if [ $is_recode == true ]; then
 		ruby $recodeAA -i $combined_aln -m $recode_model > $recoded_aln
@@ -565,14 +602,18 @@ if [ $is_iqtree == true ]; then
 
 	else
 		if [ $is_fasttree == true ]; then
-			$iqtree -s $combined_aln -spp $iqtree_outdir/iqtree.partition -m $mfp -fast -pre $iqtree_outdir/iqtree -nt $cpu -redo -quiet $tree_add_cmd
-			#$iqtree -s $combined_aln -m $mfp -fast -pre $iqtree_outdir/iqtree -nt $cpu -redo -quiet $tree_add_cmd
-			#$iqtree -s $combined_aln -m LG4M+G -fast -pre $iqtree_outdir/iqtree -nt $cpu -redo -quiet -keep-ident $tree_add_cmd
-		elif [ $is_uni_model == true ]; then
+			bb_str=''
+			ft_argu='-fast'
+		fi
+		if [ ! -z "$model" ]; then
+			$iqtree -s $combined_aln -m $model -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd $ft_argu
+		elif [ $is_uni_model == true -o $is_LG == true ]; then
 			#cd $iqtree_outdir # enter iqtree_outdir
-			$iqtree -s $combined_aln -m LG+G+I+F -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd
+			$iqtree -s $combined_aln -m LG+G{0.5}+F -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd $ft_argu
 		elif [ $is_lg == true ]; then
-			$iqtree -s $combined_aln -m LG+G -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd
+			$iqtree -s $combined_aln -m $mfp -mset LG -mrate G -mfreq F -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd $ft_argu
+		elif [ $is_Lg == true ]; then
+			$iqtree -s $combined_aln -m LG+G -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd $ft_argu
 
 		# pmsf
 		elif grep '[a-zA-Z0-9]' <<< $pmsf_model > /dev/null; then
@@ -580,7 +621,7 @@ if [ $is_iqtree == true ]; then
 		elif grep '[a-zA-Z0-9]' <<< $combined_model > /dev/null; then
 			$iqtree -s $combined_aln -m $combined_model -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd
 		elif [ $is_FastTree == false ]; then
-			$iqtree -s $combined_aln -spp $iqtree_outdir/iqtree.partition -m $mfp -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd
+			$iqtree -s $combined_aln -spp $iqtree_outdir/iqtree.partition -m $mfp -pre $iqtree_outdir/iqtree $b_str $bb_str -nt $cpu -redo -wbtl -wsl -quiet -keep-ident $tree_add_cmd $ft_argu
 		fi
 	fi
 fi
